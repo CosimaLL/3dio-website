@@ -6,7 +6,7 @@ const s3 = require('gulp-s3')
 const execSync = require('child_process').execSync
 const build = require('./build.js').build
 
-const gitBranchName = execSync(`git branch | grep \\* | cut -d ' ' -f2`).toString('utf8').replace('\n', '')
+const gitBranchName = execSync(process.env.TRAVIS_BRANCH || `git rev-parse --abbrev-ref HEAD`).toString('utf8').replace('\n', '')
 const gitCommitSha1 = execSync(`git rev-parse HEAD`).toString('utf8').replace('\n', '')
 
 console.log(gitBranchName)
