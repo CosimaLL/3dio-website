@@ -1,0 +1,34 @@
+{
+  "name": "3d-io",
+  "version": "1.0.0",
+  "description": "Your swiss knife for interior apps",
+  "homepage": "http://3d.io",
+  "repository": "archilogic-com/3d-io",
+  "private": true,
+  "author": {
+    "name": "archilogic",
+    "email": "dev.rocks@archilogic.com",
+    "url": "https://archilogic.com"
+  },
+  "scripts": {
+    "dev": "npm install || true \n killall node || true \n gulp dev & \n node_modules/.bin/lite-server -c tasks/lite-server.config.js",
+    "build": "gulp build",
+    "dist": "gulp dist"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0"
+  },
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-gzip": "^1.4.0",
+    "gulp-less": "^3.3.2",
+    "gulp-s3": "^0.11.0",
+    "lite-server": "^2.3.0",
+    "marked": "^0.3.6",
+    "pug": "^2.0.0-rc.2",
+    "pygmentize-bundled": "^2.3.0",
+    "through2": "^2.0.3",
+    "vinyl": "^2.1.0"
+  }
+}

@@ -1,0 +1,26 @@
+html
+  head
+
+    -if (title){
+      title #{title}
+    -} else {
+      title 3d.io
+    -}
+
+    block scripts
+      //- script(src='/js/jquery.js')
+
+    block css
+      //- fonts
+      link(href='font/fira/fira-mono.css', rel='stylesheet')
+      link(href='font/fira/fira-sans.css', rel='stylesheet')
+      link(href='font/roboto/roboto-condensed.css', rel='stylesheet')
+      //- stylesheets
+      link(href='css/main.css', rel='stylesheet')
+      link(href='css/code.css', rel='stylesheet')
+
+  body
+    #main-menu Products  |  Use Cases  |  Pricing  |  Docs  |  Community  |  Support
+    #content
+      block content
+    #footer footer content here
