@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta name="charset" content="utf8">
+  <meta viewport="width=device-width; initialScale=1.0">
   <title>3D.io - Coming soon!</title>
 
   <!-- TODO: inline these or merge them -->
@@ -12,8 +13,7 @@
     body {
       text-align: center;
       padding: 2rem 3rem;
-      font-family: Arial, Helvetica, sans-serif;
-      font-family: "gibson", Arial, sans-serif;
+      font-family: "gibson", Arial, Helvetica, sans-serif;
       font-weight: 300;
       letter-spacing: 0.3px;
       color: #3d4044; /* platform-grey80 */
@@ -32,13 +32,14 @@
     input {
       border: none;
       border-bottom: 1px solid #3d4044;
-      background-color: #eaebed;
       padding: 0 0.4rem;
       box-sizing: border-box;
       position: relative;
       top: -0.1rem;
       display: inline-block;
-      font-size: 1.4rem;
+      font-size: 1rem;
+      font-family: "gibson", Arial, Helvetica, sans-serif;
+      width: 11.25rem;
     }
 
     .wrapper {
@@ -88,7 +89,7 @@
 
     <p>Want to be among the first to try out 3D.io?</p>
     <form>
-      <p class="trigger">Yes, my <label for="email">email</label> is <input required id="email" type="email"></p>
+      <p>Yes, my <label for="email">email</label> is <input required id="email" type="email"></p>
       <button class="cta" type="button">Keep me posted!</button>
     </form>
 
