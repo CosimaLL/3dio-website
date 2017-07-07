@@ -11,7 +11,7 @@ http://3d.io/branch/1.0/
 
 ## Deployment
 
-[![Build Status](https://travis-ci.com/archilogic-com/3d-io.svg?token=EqpLsvSSqfB8oaHTPxqV&branch=1.0)](https://travis-ci.com/archilogic-com/3d-io-website)
+[![Build Status](https://travis-ci.com/archilogic-com/3d-io-website.svg?token=EqpLsvSSqfB8oaHTPxqV&branch=1.0)](https://travis-ci.com/archilogic-com/3d-io-website)
 
 * Every branch gets deployed automaticaly into a custom URL using following pattern:<br>
   `http://3d.io/branch/${branch-name}/`
