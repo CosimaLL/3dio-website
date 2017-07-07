@@ -9,8 +9,6 @@ const build = require('./build.js').build
 const gitBranchName = execSync(process.env.TRAVIS_BRANCH || `git rev-parse --abbrev-ref HEAD`).toString('utf8').replace('\n', '')
 const gitCommitSha1 = execSync(`git rev-parse HEAD`).toString('utf8').replace('\n', '')
 
-console.log(gitBranchName)
-
 /*
  * configs
  */
