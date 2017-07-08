@@ -48,10 +48,8 @@ const dest = 'build'
  * bootstrap
  */
 
-const markedRenderer = new marked.Renderer()
-markedRenderer.link = remapLinks
 marked.setOptions({
-  renderer: markedRenderer,
+  renderer: new marked.Renderer(),
   gfm: true,
   sanitize: false,
   highlight (code, lang, callback) {
@@ -107,6 +105,7 @@ function renderMarkdown () {
     // convert markdown to html
     marked(markdownText, (err, content) => {
       if (err) return cb(err)
+      console.log(content)
       // render pug to html
       var pugPath = path.resolve(process.cwd(), 'src/pug/md-wrapper.pug')
       html = pug.renderFile(pugPath, {
