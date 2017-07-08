@@ -1,6 +1,8 @@
 # 3d.io Website
 
-First official release preview:<br>
+[![Build Status](https://travis-ci.com/archilogic-com/3d-io-website.svg?token=EqpLsvSSqfB8oaHTPxqV&branch=1.0)](https://travis-ci.com/archilogic-com/3d-io-website)
+
+Preview of first official release:<br>
 http://3d.io/branch/1.0/
 
 ## Editing
@@ -11,8 +13,6 @@ All content resides in `src` folder. Beside html and css the following file type
 * `.less` files
 
 ## Deployment
-
-[![Build Status](https://travis-ci.com/archilogic-com/3d-io-website.svg?token=EqpLsvSSqfB8oaHTPxqV&branch=1.0)](https://travis-ci.com/archilogic-com/3d-io-website)
 
 * Every branch gets deployed automaticaly into a custom URL using following pattern:<br>
   `http://3d.io/branch/${branch-name}/`<br>
