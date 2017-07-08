@@ -26,7 +26,7 @@ const debug = false
 const src = {
   pug: [
     'src/**/*.pug',
-    '!src/pug/**/**'
+    '!src/layout/**/**'
   ],
   pugWatch: [
     'src/**/*.pug',
@@ -42,8 +42,8 @@ const src = {
   ],
   staticContent: [
     'src/**/**',
-    '!src/pug',
-    '!src/pug/**/**',
+    '!src/layout',
+    '!src/layout/**/**',
     '!src/**/*.pug',
     '!src/**/*.md',
     '!src/**/*.less'
@@ -116,7 +116,7 @@ function renderMarkdown () {
     marked(markdownText, (err, content) => {
       if (err) return cb(err)
       // render pug to html
-      var pugPath = path.resolve(process.cwd(), 'src/pug/md-wrapper.pug')
+      var pugPath = path.resolve(process.cwd(), 'src/layout/md-wrapper.pug')
       html = pug.renderFile(pugPath, {
         filename: pugPath,
         cache: true,
@@ -163,7 +163,7 @@ const mdExtensionInUrlRegex = /(\.md)/gi
 function remapLinks (html) {
   return html.replace(aTagInHtmlRegex, function (tag, url) {
     // replace relative URLs only
-    if (url.substr(0, 4) === 'http') {
+    if (!url || url.substr(0, 4) === 'http' || url.substr(0, 7) === 'mailto:') {
       return tag
     } else {
       return tag.replace(
