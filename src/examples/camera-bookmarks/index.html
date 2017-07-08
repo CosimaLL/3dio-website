@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Examples • Camera bookmarks</title>
+  <meta name="description" content="BASE components for aframe demo">
+  <!-- aframe library -->
+  <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+  <!-- base library. distributed via 'npm run dist' in https://github.com/archilogic-com/base-query -->
+  <script src="https://code.archilogic.com/base-query-0.0.5-nightly.js"></script>
+  <!-- base components -->
+  <script src="../components/data3d.js"></script>
+  <!-- The example uses the animation component from Keving Ngo -->
+  <script src="https://unpkg.com/aframe-animation-component/dist/aframe-animation-component.min.js"></script>
+
+  <style>
+    button {
+      background: transparent;
+      text-decoration: underline;
+      color: blue;
+      border: none;
+      font-size: 2em;
+      height: 2.6em;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <button id="overview">Overview</button>
+    <button id="livingroom">Living room</button>
+    <button id="office">Office</button>
+    <button id="bedroom">Bedroom</button>
+    <button id="bathroom">Bathroom</button>
+  </nav>
+
+  <a-scene>
+    <!-- Using two animations to control turning and moving independently -->
+    <a-entity id="cam" camera="userHeight: 1.6" wasd-controls="acceleration:6;easing:6;" look-controls="reverseMouseDrag:false" position="-2 0 0"
+              animation__move="property:position;ease:easeInOutSine;dur:3000;from:-2 1.6 0;to:-2 1.6 0"
+              animation__turn="property:rotation;ease:easeInOutSine;dur:3000;from:0 0 0;to:0 0 0">
+    </a-entity>
+
+    <a-entity base-data3d="key:/3f995099-d624-4c8e-ab6b-1fd5e3799173/170515-0913-4p3ktf/1e588a3b-90ac-4a32-b5b8-ff2fda7f87c4.gz.data3d.buffer" position="0 0 0"></a-entity>
+  </a-scene>
+
+  <script>
+    var camera = document.getElementById('cam')
+
+    // When one of the rooms is clicked, we animation the camera accordingly
+
+    document.getElementById('overview').addEventListener('click', function() {
+      animate(camera, "0 10 0", "-90 0 0")
+    })
+
+    document.getElementById('livingroom').addEventListener('click', function() {
+      animate(camera, "-1.8 1.6 1.2", "0 135 0")
+    })
+
+    document.getElementById('office').addEventListener('click', function() {
+      animate(camera, "-4 1.6 -3", "0 -130 0")
+    })
+
+    document.getElementById('bedroom').addEventListener('click', function() {
+      animate(camera, "2.3 1.6 -3.2", "0 -131 0")
+    })
+
+        document.getElementById('bathroom').addEventListener('click', function() {
+      animate(camera, "-0.5 1.6 1.9", "0 -152 0")
+    })
+
+    // This helper function takes an entity (in this example our camera) and a target position and rotation
+    // and then resets two animations (animation__move for moving the camera, animation__turn for turning it around) to begin from where we are right now and plays them again
+    function animate(entity, newPosition, newRotation) {
+      var currentPosition = entity.getAttribute('position')
+      var currentRotation = entity.getAttribute('rotation')
+
+      var startPosition = currentPosition.x + ' ' + currentPosition.y + ' ' + currentPosition.z
+      var startRotation = currentRotation.x + ' ' + currentRotation.y + ' ' + currentRotation.z
+
+      entity.components.animation__move.data.from = startPosition
+      entity.components.animation__move.data.to = newPosition
+      entity.components.animation__move.update()
+
+      entity.components.animation__turn.data.from = startRotation
+      entity.components.animation__turn.data.to = newRotation
+      entity.components.animation__turn.update()
+
+      entity.components.animation__move.resumeAnimation()
+      entity.components.animation__turn.resumeAnimation()
+    }
+
+  </script>
+</body>
+</html>

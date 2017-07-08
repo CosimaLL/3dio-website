@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Material selection in BASE</title>
+  <meta name="description" content="Demo for Material selection in BASE">
+  <!-- aframe library -->
+  <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+  <!-- base library. distributed via 'npm run dist' in https://github.com/archilogic-com/base-query -->
+  <script src="https://code.archilogic.com/base-query-0.0.5-nightly.js"></script>
+  <!-- base components -->
+  <script src="../components/product.js"></script>
+
+  <style>
+    label {
+      display: block;
+      padding: 0.2em;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 2em;
+      text-align: center;
+    }
+  </style>
+
+</head>
+<body>
+<label for="material">
+  Pick a material:
+  <!-- This dropdown will receive the list of available materials -->
+  <select id="material"></select>
+</label>
+<a-scene>
+
+  <a-entity camera="userHeight: 1.6" wasd-controls="acceleration:6;easing:6;" look-controls="reverseMouseDrag:false" position="-2 0 0"></a-entity>
+
+  <!-- products specified by id (= productResourceId) -->
+  <!-- get more: https://spaces.archilogic.com/products -->
+  <!-- This shelf has one part ("Wood") and a variety of available materials -->
+  <a-entity id="shelf" base-product="id:10344b13-d981-47a0-90ac-f048ee2780a6" position="-2 0 -3.2" rotation="0 180 0"></a-entity>
+
+</a-scene>
+<script>
+  var select = document.querySelector('select')
+  var shelf = document.querySelector('a-entity#shelf')
+
+  shelf.addEventListener('model-loaded', function() {
+    // We could enumerate over the exposed parts of a product, but this shelf has only one called "Wood"
+    this.components['base-product'].availableMaterials.Wood.forEach(function(materialName) {
+      var materialItem = document.createElement('option')
+      materialItem.value = materialName
+      materialItem.textContent = materialName
+      select.appendChild(materialItem)
+    })
+    // Set the selected material to the default material of the "Wood" part
+    select.value = this.components['base-product'].data3d.meshes.Wood.material
+  })
+
+  // If the material is changed in the A-Frame inspector or by changing attributes, an "material-changed" event will befired
+  shelf.addEventListener('material-changed', function(evt) {
+    select.value = evt.detail.material
+    console.log(evt)
+  })
+
+  // When the dropdown is changed by the user, we update the base-product entity accordingly
+  select.addEventListener('change', function() {
+    shelf.components['base-product'].data['material_Wood'] = this.value
+    shelf.components['base-product'].update()
+  })
+
+</script>
+</body>
+</html>
