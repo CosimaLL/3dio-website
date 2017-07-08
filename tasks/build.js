@@ -14,6 +14,9 @@ const pygmentize = require('pygmentize-bundled')
 
 const gitBranchName = process.env.TRAVIS_BRANCH || execSync(`git rev-parse --abbrev-ref HEAD`).toString('utf8').replace('\n', '')
 const gitCommitSha1 = execSync(`git rev-parse HEAD`).toString('utf8').replace('\n', '')
+// only branches deployed by CI have root directories
+// all other environments are running on root dir
+const rootDir = process.env.TRAVIS_BRANCH && process.env.TRAVIS_BRANCH !== 'master' ? '/branch/'+process.env.TRAVIS_BRANCH+'/' : '/'
 
 /*
  * configs
@@ -160,7 +163,7 @@ function remapLinks (html) {
       return tag.replace(
         url,
         //'https://3d.io/' + (url[0] !== '/' ? url : url.substr(1))
-        url
+        rootDir + url
       ).replace(
         mdExtensionInUrlRegex,
         '.html'
