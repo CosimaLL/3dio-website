@@ -20,7 +20,11 @@ html
       link(href='css/code.css', rel='stylesheet')
 
   body
-    #main-menu Products  |  Use Cases  |  Pricing  |  Docs  |  Community  |  Support
+    #menu-top Products  |  Use Cases  |  Pricing  |  Docs  |  Community  |  Support
+      .left
+        a(href='/') 3d.io
+      .right Login | Sign Up
     #content
       block content
-    #footer footer content here
+    #footer
+      a(href=githubLink).edit-on-github Suggest edit

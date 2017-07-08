@@ -12,6 +12,9 @@ const less = require('gulp-less')
 const marked = require('marked')
 const pygmentize = require('pygmentize-bundled')
 
+const gitBranchName = process.env.TRAVIS_BRANCH || execSync(`git rev-parse --abbrev-ref HEAD`).toString('utf8').replace('\n', '')
+const gitCommitSha1 = execSync(`git rev-parse HEAD`).toString('utf8').replace('\n', '')
+
 /*
  * configs
  */
@@ -22,6 +25,9 @@ const src = {
     'src/**/*.pug',
     '!src/pug/**/**'
   ],
+  pugWatch: [
+    'src/**/*.pug',
+  ],
   markdown: 'src/**/*.md',
   less: 'src/**/*.less',
   staticContent: [
@@ -31,6 +37,9 @@ const src = {
     '!src/**/*.pug',
     '!src/**/*.md',
     '!src/**/*.less'
+  ],
+  watch: [
+    'src/**/**'
   ]
 }
 const dest = 'build'
@@ -73,7 +82,8 @@ function renderPug () {
     // render pug to html
     let html = pug.render(pugText, {
       filename: inputFile.path,
-      pretty: debug
+      pretty: debug,
+      githubLink: getGithubEditLink(inputFile)
     })
     // remap relative links and markdown links
     html = remapLinks(html)
@@ -103,7 +113,8 @@ function renderMarkdown () {
         filename: pugPath,
         cache: true,
         pretty: debug,
-        content: content
+        content: content,
+        githubLink: getGithubEditLink(inputFile)
       })
       // remap relative links and markdown links
       html = remapLinks(html)
@@ -129,7 +140,7 @@ function renderLess () {
 }
 
 function watch () {
-  gulp.watch(src.pug, renderPug)
+  gulp.watch(src.pugWatch, renderPug)
   gulp.watch(src.markdown, renderMarkdown)
   gulp.watch(src.less, renderLess)
   gulp.watch(src.staticContent, copyStaticContent)
@@ -165,6 +176,11 @@ function markdownToHtml (md) {
       err ? reject(err) : resolve(html)
     })
   })
+}
+
+function getGithubEditLink (file) {
+  var relativePath = 'src/'+file.path.substr(file.base.length)
+  return `https://github.com/archilogic-com/3d-io-website/edit/${gitBranchName}/${relativePath}`
 }
 
 /*
