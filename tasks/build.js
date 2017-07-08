@@ -32,7 +32,14 @@ const src = {
     'src/**/*.pug',
   ],
   markdown: 'src/**/*.md',
-  less: 'src/**/*.less',
+  less: [
+    // the first ** are necessary to marks 'src' as base dir for outpuut paths
+    'src/**/css/main.less',
+    'src/**/font/**/*.less'
+  ],
+  lessWatch: [
+    'src/**/*.less',
+  ],
   staticContent: [
     'src/**/**',
     '!src/pug',
@@ -143,7 +150,7 @@ function renderLess () {
 function watch () {
   gulp.watch(src.pugWatch, renderPug)
   gulp.watch(src.markdown, renderMarkdown)
-  gulp.watch(src.less, renderLess)
+  gulp.watch(src.lessWatch, renderLess)
   gulp.watch(src.staticContent, copyStaticContent)
 }
 

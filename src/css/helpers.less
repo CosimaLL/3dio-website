@@ -1,0 +1,22 @@
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+.rounded-corners (@radius: 2px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -ms-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.fullscreen (@bg-color: white) {
+    :-moz-full-screen { background: @bg-color; width: 100%; height: 100%; }
+    :-webkit-full-screen { background: @bg-color; width: 100%; height: 100%; }
+    :fullscreen { background: @bg-color; width: 100%; height: 100%; }
+}
