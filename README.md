@@ -3,11 +3,12 @@
 First official release preview:<br>
 http://3d.io/branch/1.0/
 
-## Development
+## Editing
 
-* Install: `git clone https://github.com/archilogic-com/3d-io-website.git`
-* Run local dev server: `npm run dev`<br>
-  Will watch files in `src` dir, rebuild and update browser window automaticaly.
+All content resides in `src` folder. Beside html and css the following file types are supported and will get compiled to html during automatic deployment:
+* `.pug` templates
+* `.md` markdown files
+* `.less` files
 
 ## Deployment
 
@@ -21,3 +22,9 @@ http://3d.io/branch/1.0/
 * Build and distribution scripts:<br>
   https://github.com/archilogic-com/3d-io-website/blob/1.0/tasks/build.js<br>
   https://github.com/archilogic-com/3d-io-website/blob/1.0/tasks/dist.js<br>
+
+## Development
+
+* Install: `git clone https://github.com/archilogic-com/3d-io-website.git`
+* Run local dev server: `npm run dev`<br>
+  Will watch files in `src` dir, rebuild and update browser window automaticaly.
