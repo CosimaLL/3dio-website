@@ -108,7 +108,6 @@ function renderMarkdown () {
     // convert markdown to html
     marked(markdownText, (err, content) => {
       if (err) return cb(err)
-      console.log(content)
       // render pug to html
       var pugPath = path.resolve(process.cwd(), 'src/pug/md-wrapper.pug')
       html = pug.renderFile(pugPath, {
