@@ -20,3 +20,38 @@
     :-webkit-full-screen { background: @bg-color; width: 100%; height: 100%; }
     :fullscreen { background: @bg-color; width: 100%; height: 100%; }
 }
+
+.transition(@transition) {
+    -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -o-transition: @transition;
+    transition: @transition;
+}
+
+.flex-direction(@direction) {
+    -webkit-flex-direction: @direction;
+    -ms-flex-direction: @direction;
+    flex-direction: @direction;
+}
+
+.animation(@animation) {
+    animation: @animation;
+    -o-animation: @animation;
+    -ms-animation: @animation;
+    -webkit-animation: @animation;
+    -moz-animation: @animation;
+}
+
+.transform(@transform) {
+    -webkit-transform: @transform;
+    -moz-transform: @transform;
+    -o-transform: @transform;
+    transform: @transform;
+}
+
+.user-select(@select) {
+    -webkit-user-select: @select;
+    -moz-user-select: @select;
+    -ms-user-select: @select;
+    user-select: @select;
+}

@@ -1,8 +1,79 @@
-extends pug/layout.pug
+extends layout/main.pug
 
 block content
-  img(src='img/3d-io-logo-large.svg', style='height: 200px;')
-  br
-  br
-  br
-  a#sdsds(href='sample-page.md') link to markdown sample page
+  .container
+    .row.title-row
+      .six.columns
+        <svg class="spacer" xmlns="http://www.w3.org/2000/svg" style="width:100%;" viewBox="0 0 500 60"></svg>
+        img(src='img/3d-io-logo-large.svg', style='width: 100%; max-width: 300px; margin: 15px 0 15px 0;')
+        br
+        <svg class="spacer" xmlns="http://www.w3.org/2000/svg" style="width:100%;" viewBox="0 0 500 50"></svg>
+        a(href='https://spaces.archilogic.com/order') Build apps
+        a(href='https://spaces.archilogic.com/order') Publish 3d models
+      .six.columns
+        img(src='img/title-pic.png', style='margin-top: 20px; width: 100%; max-width: 400px;')
+    .row
+      .four.columns
+        h2 Instant Content
+        p Focus on creation by remixing <a href="https://spaces.archilogic.com/products">beautifully crafted 3d models</a> of real products from our wast data sets. To keeps things simple we packaged all of that into <a href="https://base-for-aframe.glitch.me/about">open sourced A-Frame components</a>. Simply <a href="https://base-for-aframe.glitch.me/about">give it a try</a> and even <a href="https://docs.archilogic.com/en/tutorials/custom-3d-content/index.html">import your own 3d models via drag&drop</a> or <a href="">API</a>. You have a good old 2D floor plan? Perfect: we will <a href="https://spaces.archilogic.com/order">convert it to 3D for free</a>.
+      .four.columns
+        h2 Cloud Services
+        p Leverage your webGL apps with scalable preprocessing in our cloud: <a href="https://docs.archilogic.com/en/3d-editor/lighting/">bake lightmaps</a>, <a href="https://docs.archilogic.com/en/3d-editor/materials/">create texture-sets</a>, <a href="">apply 3d filters</a> or furnish a room in seconds using <a href="">virtual staging AI</a>. Boost your app performance using environment adapted textures and shaders, progressive loading, caching and preprocessing.
+      .four.columns
+        h2 Partner Network
+        p We are facing an overwhelming demand for VR and 3d apps from innovation ready architects, real estate brokers, marketing agencies and city planners. To establish synergies amongst peers we’ve decided to open our <a href="https://spaces.archilogic.com/partners">exclusive partner network</a> to qualified app builders and content creators <a href="https://spaces.archilogic.com/partners">Apply today</a>.
+
+  .container
+    .row
+      .twelve.columns
+        h2#use-cases Use Cases
+    .row
+      .four.columns
+        img(src='img/use-case-a-frame.jpg', style='margin-top: 20px; width: 100%;')
+        h3 Content Rich A-Frame App
+        p logo, custom loading screen using archilogic product 3d models, created with app-creator.
+      .four.columns
+        img(src='img/use-case-portfolio.jpg', style='margin-top: 20px; width: 100%;')
+        h3 Interior Design Protfolio
+        p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+      .four.columns
+        img(src='img/use-case-converted-floorplan.jpg', style='margin-top: 20px; width: 100%;')
+        h3 2D Floor Plan Converted to a 3D Model
+        p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+
+  .container
+    .row
+      .twelve.columns
+        h2#use-cases Products
+    .row
+      .four.columns
+      .four.columns
+      .four.columns
+
+  .container
+    .row
+      .twelve.columns
+        h2#use-cases Technology
+    .row
+      .four.columns
+      .four.columns
+      .four.columns
+
+  .container
+    .row
+      .twelve.columns
+        h2#use-cases Pricing
+    .row
+      .four.columns
+      .four.columns
+      .four.columns
+
+  .container
+    .row
+      .twelve.columns
+        h2#use-cases Community
+    .row
+      .four.columns
+        a(href='sample-page.md') Link to sample markdown page
+      .four.columns
+      .four.columns

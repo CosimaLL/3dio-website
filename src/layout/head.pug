@@ -1,0 +1,19 @@
+//- title
+-if (title){
+  //- prefer pug variable
+  title #{title}
+-} else {
+  // fallback
+  title 3d.io
+-}
+
+script(src='/js/jquery-3.2.1.min.js')
+script(src='/js/menu-top.js')
+
+//- fonts
+link(href='font/fira/fira-mono.css', rel='stylesheet')
+link(href='font/fira/fira-sans.css', rel='stylesheet')
+link(href='font/roboto/roboto-condensed.css', rel='stylesheet')
+
+//- stylesheets
+link(href='css/main.css', rel='stylesheet')
