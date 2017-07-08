@@ -14,7 +14,7 @@ http://3d.io/branch/1.0/
 [![Build Status](https://travis-ci.com/archilogic-com/3d-io-website.svg?token=EqpLsvSSqfB8oaHTPxqV&branch=1.0)](https://travis-ci.com/archilogic-com/3d-io-website)
 
 * Every branch gets deployed automaticaly into a custom URL using following pattern:<br>
-  `http://3d.io/branch/${branch-name}/`
+  `http://3d.io/branch/${branch-name}/`<br>
   Build takes ca. 2 minutes. Colored button above indicates status.
 * Continuous Integration via travis CI:<br>
   https://travis-ci.com/archilogic-com/3d-io-website
