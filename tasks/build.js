@@ -22,7 +22,7 @@ const rootDir = process.env.TRAVIS_BRANCH && process.env.TRAVIS_BRANCH !== 'mast
  * configs
  */
 
-const debug = false
+const debug = true
 const src = {
   pug: [
     'src/**/*.pug',
@@ -34,7 +34,7 @@ const src = {
   markdown: 'src/**/*.md',
   less: [
     // the first ** are necessary to marks 'src' as base dir for outpuut paths
-    'src/**/css/main.less',
+    'src/**/css/*.less',
     'src/**/font/**/*.less'
   ],
   lessWatch: [

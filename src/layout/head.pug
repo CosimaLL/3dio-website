@@ -1,12 +1,48 @@
-//- title
--if (title){
-  //- prefer pug variable
-  title #{title}
--} else {
-  // fallback
-  title 3d.io
--}
+//- fallbacks
+-if (!title) title = '3d.io'
+-if (!description) description = 'Toolkit for 3d interior web apps.'
+-var image = 'img/social.png'
 
+//- classics
+title #{title}
+meta(charset='utf-8')
+meta(name='description', content=description)
+meta(name='publisher', content='https://archilogic.com')
+meta(name='name', content=title)
+meta(name='image', content=image)
+meta(name='theme-color', content='#ffffff')
+
+//- mobile
+meta(name='viewport', content='width=device-width, initial-scale=1')
+
+//- icons
+link(rel='shortcut icon' href='img/favicon.ico')
+link(rel='icon', type='image/png', href='img/favicon-black-16px.png', sizes='16x16')
+link(rel='icon', type='image/png', href='img/favicon-black-32px.png', sizes='32x32')
+link(rel='icon', type='image/png', href='img/favicon-black-48px.png', sizes='48x48')
+link(rel='icon', type='image/png', href='img/favicon-black-64px.png', sizes='64x64')
+link(rel='icon', type='image/png', href='img/favicon-black-128px.png', sizes='128x128')
+link(rel='icon', type='image/png', href='img/favicon-black-192px.png', sizes='192x192')
+link(rel='apple-touch-icon' href='img/apple-touch-icon-180px.png')
+
+//- open graph
+meta(property='og:site_name' content=title)
+meta(property='og:title' content=title)
+meta(property='og:description' content=description)
+meta(property='og:type' content='website')
+meta(property='og:url' content='https://3d.io')
+meta(property='og:locale' content='en')
+
+//- twitter
+meta(property='twitter:card' content='summary_large_image')
+meta(property='twitter:site' content='@archilogic3d')
+meta(property='twitter:title' content=title)
+meta(property='twitter:description' content=description)
+meta(property='twitter:image' content=image)
+meta(property='twitter:domain' content='3d.io')
+meta(property='twitter:domain' content='3d.io')
+
+//- scripts
 script(src='js/jquery-3.2.1.min.js')
 script(src='js/menu-top.js')
 
@@ -16,4 +52,4 @@ link(href='font/fira/fira-sans.css', rel='stylesheet')
 link(href='font/roboto/roboto-condensed.css', rel='stylesheet')
 
 //- stylesheets
-link(href='css/main.css', rel='stylesheet')
+link(href='css/common.css', rel='stylesheet')

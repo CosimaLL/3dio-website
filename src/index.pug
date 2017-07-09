@@ -1,5 +1,8 @@
 extends layout/main.pug
 
+block head
+  link(href='css/index-page.css', rel='stylesheet')
+
 block content
   .container
     .row.title-row
@@ -8,14 +11,14 @@ block content
         img(src='img/3d-io-logo-large.svg', style='width: 100%; max-width: 300px; margin: 15px 0 15px 0;')
         br
         <svg class="spacer" xmlns="http://www.w3.org/2000/svg" style="width:100%;" viewBox="0 0 500 50"></svg>
-        a(href='https://spaces.archilogic.com/order') Build apps
+        a(href='https://base-for-aframe.glitch.me/about') Build apps
         a(href='https://spaces.archilogic.com/order') Publish 3d models
       .six.columns
         img(src='img/title-pic.png', style='margin-top: 20px; width: 100%; max-width: 400px;')
     .row
       .four.columns
         h2 Instant Content
-        p Focus on creation by remixing <a href="https://spaces.archilogic.com/products">beautifully crafted 3d models</a> of real products from our wast data sets. To keeps things simple we packaged all of that into <a href="https://base-for-aframe.glitch.me/about">open sourced A-Frame components</a>. Simply <a href="https://base-for-aframe.glitch.me/about">give it a try</a> and even <a href="https://docs.archilogic.com/en/tutorials/custom-3d-content/index.html">import your own 3d models via drag&drop</a> or <a href="">API</a>. You have a good old 2D floor plan? Perfect: we will <a href="https://spaces.archilogic.com/order">convert it to 3D for free</a>.
+        p Focus on creation by remixing <a href="https://spaces.archilogic.com/products">beautifully crafted 3d models</a> of real products from our wast data sets. To keeps things simple we packaged all of that into <a href="https://github.com/archilogic-com/base-for-aframe">open sourced A-Frame components</a>. Simply <a href="https://base-for-aframe.glitch.me/about">give it a try</a> and even <a href="https://docs.archilogic.com/en/tutorials/custom-3d-content/index.html">import your own 3d models via drag&drop</a> or <a href="">API</a>. You have a good old 2D floor plan? Perfect: we will <a href="https://spaces.archilogic.com/order">convert it to 3D for free</a>.
       .four.columns
         h2 Cloud Services
         p Leverage your webGL apps with scalable preprocessing in our cloud: <a href="https://docs.archilogic.com/en/3d-editor/lighting/">bake lightmaps</a>, <a href="https://docs.archilogic.com/en/3d-editor/materials/">create texture-sets</a>, <a href="">apply 3d filters</a> or furnish a room in seconds using <a href="">virtual staging AI</a>. Boost your app performance using environment adapted textures and shaders, progressive loading, caching and preprocessing.
@@ -23,10 +26,10 @@ block content
         h2 Partner Network
         p We are facing an overwhelming demand for VR and 3d apps from innovation ready architects, real estate brokers, marketing agencies and city planners. To establish synergies amongst peers we’ve decided to open our <a href="https://spaces.archilogic.com/partners">exclusive partner network</a> to qualified app builders and content creators <a href="https://spaces.archilogic.com/partners">Apply today</a>.
 
-  .container
+  .container#use-cases
     .row
       .twelve.columns
-        h2#use-cases Use Cases
+        h2 Use Cases
     .row
       .four.columns
         img(src='img/use-case-a-frame.jpg', style='margin-top: 20px; width: 100%;')
@@ -41,37 +44,66 @@ block content
         h3 2D Floor Plan Converted to a 3D Model
         p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
 
-  .container
+  .container#products
     .row
       .twelve.columns
-        h2#use-cases Products
+        h2 Products
     .row
       .four.columns
+        p Content Management
+        p
       .four.columns
+        p Content Creation
+        p
       .four.columns
+        p Content Supercharging
+        p
 
   .container
     .row
       .twelve.columns
-        h2#use-cases Technology
+        h2 Technology
     .row
       .four.columns
+        h3 Build With Modularity in Mind
+        p Building blocks doing one thing at a time an do it well, not a framework but libs and services you can freely combine and mix with other stuff.
       .four.columns
+        h3 Performance Optimized
+        p Progressive loading, preprocessing and caching as much as we can in our cloud to keep your devices cool -> helo mobile ;)
       .four.columns
-
-  .container
-    .row
-      .twelve.columns
-        h2#use-cases Pricing
-    .row
-      .four.columns
-      .four.columns
-      .four.columns
-
-  .container
+        h3 Isomorphic Code Base
+        p 3d.io JS lib is fully isomorphic: run it in your browser or from command line with node.js - i.e. plugins for desktop software. or run it on your coffee machine if you like.
     .row
       .twelve.columns
-        h2#use-cases Community
+        p
+          img(src='img/icon-android.svg', class='tech-icon')
+          img(src='img/icon-ios.svg', class='tech-icon')
+          img(src='img/icon-matterport.svg', class='tech-icon')
+          img(src='img/icon-sketchup.svg', class='tech-icon')
+          img(src='img/icon-vr.svg', class='tech-icon')
+          img(src='img/icon-node.svg', class='tech-icon')
+          img(src='img/icon-php.svg', class='tech-icon')
+          img(src='img/icon-blender.svg', class='tech-icon')
+
+  .container#pricing
+    .row
+      .twelve.columns
+        h2 Pricing
+    .row
+      .twelve.columns
+      table(style='background: #ddd; width: 100%;')
+        tr
+          td(style='width:35%padding: 3px; border: 2px solid white;')
+          td(style='width:13%;padding: 3px; border: 2px solid white;') Free
+          td(style='width:13%;padding: 3px; border: 2px solid white;') Monthly
+          td(style='width:13%;padding: 3px; border: 2px solid white;') Pay As You Go
+          td(style='width:13%;padding: 3px; border: 2px solid white;') Certified Partner
+          td(style='width:13%;padding: 3px; border: 2px solid white;') Enterprise
+
+  .container#community
+    .row
+      .twelve.columns
+        h2 Community
     .row
       .four.columns
         a(href='sample-page.md') Link to sample markdown page
