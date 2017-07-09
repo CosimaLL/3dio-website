@@ -2,15 +2,15 @@
 
 [![Build Status](https://travis-ci.com/archilogic-com/3d-io-website.svg?token=EqpLsvSSqfB8oaHTPxqV&branch=1.0)](https://travis-ci.com/archilogic-com/3d-io-website)
 
-Preview of first official release:<br>
+Official release preview:<br>
 http://3d.io/branch/1.0/
 
 ## Editing
 
-All content resides in `src` folder. Beside html and css the following file types are supported and will get compiled to html during automatic deployment:
-* `.pug` templates
-* `.md` markdown files
-* `.less` files
+All content resides in `src` folder. Beside html and css the following file types are supported and will get compiled to html during build process:
+* `.pug` templates https://www.npmjs.com/package/pug
+* `.md` markdown files https://help.github.com/categories/writing-on-github/
+* `.less` files http://lesscss.org/
 
 ## Deployment
 
@@ -27,4 +27,4 @@ All content resides in `src` folder. Beside html and css the following file type
 
 * Install: `git clone https://github.com/archilogic-com/3d-io-website.git`
 * Run local dev server: `npm run dev`<br>
-  Will watch files in `src` dir, rebuild and update browser window automaticaly.
+  This will watch files in `src` dir, rebuild and update browser window automaticaly.
