@@ -7,7 +7,7 @@ http://3d.io/branch/1.0/
 
 ## Editing
 
-All content resides in `src` folder. Beside html and css the following file types are supported and will get compiled to html during automatic deployment:
+All content resides in `src` folder. Beside html and css the following file types are supported and will get compiled to html during build process:
 * `.pug` templates
 * `.md` markdown files
 * `.less` files
