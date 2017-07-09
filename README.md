@@ -7,7 +7,7 @@ http://3d.io/branch/1.0/
 
 ## Editing
 
-All content resides in `src` folder. Beside html and css the following file types are supported and will get compiled to html during build process:
+All content resides in `src` folder. Beside html and css the following file types are supported and will get precompiled during build process to be served as static html:
 * `.pug` templates https://www.npmjs.com/package/pug
 * `.md` markdown files https://help.github.com/categories/writing-on-github/
 * `.less` files http://lesscss.org/
