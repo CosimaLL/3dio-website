@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/archilogic-com/3d-io-website.svg?token=EqpLsvSSqfB8oaHTPxqV&branch=1.0)](https://travis-ci.com/archilogic-com/3d-io-website)
 
-Preview of first official release:<br>
+Official release preview:<br>
 http://3d.io/branch/1.0/
 
 ## Editing
