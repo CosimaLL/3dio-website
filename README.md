@@ -12,7 +12,7 @@ All content resides in `src` folder. Beside html and css the following file type
 * `.md` markdown files https://help.github.com/categories/writing-on-github/
 * `.less` files http://lesscss.org/
 
-All non-native browser file types will get compiled during build process in order to serve the entire site as static data only.
+Non-native browser file types will get compiled during build process in order to serve the entire site as static data only.
 
 ## Deployment
 
