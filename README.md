@@ -27,4 +27,4 @@ All content resides in `src` folder. Beside html and css the following file type
 
 * Install: `git clone https://github.com/archilogic-com/3d-io-website.git`
 * Run local dev server: `npm run dev`<br>
-  Will watch files in `src` dir, rebuild and update browser window automaticaly.
+  This will watch files in `src` dir, rebuild and update browser window automaticaly.
