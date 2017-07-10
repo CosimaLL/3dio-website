@@ -33,18 +33,27 @@ block content
       .twelve.columns
         h2 Use Cases
     .row
-      .four.columns
-        img(src='img/use-case-a-frame.jpg', style='margin-top: 20px; width: 100%;')
-        h3 Content Rich A-Frame App
-        p logo, custom loading screen using archilogic product 3d models, created with app-creator.
-      .four.columns
-        img(src='img/use-case-portfolio.jpg', style='margin-top: 20px; width: 100%;')
-        h3 Interior Design Protfolio
-        p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
-      .four.columns
-        img(src='img/use-case-converted-floorplan.jpg', style='margin-top: 20px; width: 100%;')
-        h3 2D Floor Plan Converted to a 3D Model
-        p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+      .six.columns
+        .example
+          img(src='img/use-case-a-frame.jpg', style='margin-top: 20px; width: 100%;')
+          h3 Content Rich A-Frame App
+          //- p logo, custom loading screen using archilogic product 3d models, created with app-creator.
+      .six.columns
+        .example
+          img(src='img/use-case-portfolio.jpg', style='margin-top: 20px; width: 100%;')
+          h3 Interior Design Protfolio
+          //- p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+    .row
+      .six.columns
+        .example
+          img(src='img/use-case-converted-floorplan.jpg', style='margin-top: 20px; width: 100%;')
+          h3 3D Model from Floor Plan
+          //- p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+      .six.columns
+        .example
+          img(src='img/use-case-converted-floorplan.jpg', style='margin-top: 20px; width: 100%;')
+          h3 Virtually Staged 3D Scan
+          //- p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
 
   .container#products
     //- Read products json and extract data for use in template
@@ -69,7 +78,7 @@ block content
             h4= p.title
             .badges
               if p.appUrl
-                a(href=p.appUrl).app App
+                a(href=p.appUrl, target='_blank').app App
               if p.apiUrl
                 a(href=p.apiUrl).api API
               if !p.appUrl && !p.apiUrl
@@ -80,44 +89,15 @@ block content
       .twelve.columns
         h2 Products
     .row
+      .seven.columns
+        p(style='margin-bottom:20px;') Building blocks doing one thing at a time an do it well, not a framework but libs and services you can freely combine and mix with other stuff.
+    .row
       .four.columns
-        p Content Management:
-        br
         +productList(contentManagementProducts)
       .four.columns
-        p Content Creation:
-        br
         +productList(contentCreationProducts)
       .four.columns
-        p Content Supercharging:
-        br
         +productList(contentEnhancementProducts)
-
-  .container
-    .row
-      .twelve.columns
-        h2 Technology
-    .row
-      .four.columns
-        h3 Build With Modularity in Mind
-        p Building blocks doing one thing at a time an do it well, not a framework but libs and services you can freely combine and mix with other stuff.
-      .four.columns
-        h3 Performance Optimized
-        p Progressive loading, preprocessing and caching as much as we can in our cloud to keep your devices cool -> helo mobile ;)
-      .four.columns
-        h3 Isomorphic Code Base
-        p 3d.io JS lib is fully isomorphic: run it in your browser or from command line with node.js - i.e. plugins for desktop software. or run it on your coffee machine if you like.
-    .row
-      .twelve.columns
-        p
-          img(src='img/icon-android.svg', class='tech-icon')
-          img(src='img/icon-ios.svg', class='tech-icon')
-          img(src='img/icon-matterport.svg', class='tech-icon')
-          img(src='img/icon-sketchup.svg', class='tech-icon')
-          img(src='img/icon-vr.svg', class='tech-icon')
-          img(src='img/icon-node.svg', class='tech-icon')
-          img(src='img/icon-php.svg', class='tech-icon')
-          img(src='img/icon-blender.svg', class='tech-icon')
 
   .container#pricing
     .row
