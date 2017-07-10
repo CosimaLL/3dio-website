@@ -35,25 +35,34 @@ block content
     .row
       .six.columns
         .example
-          img(src='img/use-case-a-frame.jpg', style='margin-top: 20px; width: 100%;')
-          h3 Content Rich A-Frame App
-          //- p logo, custom loading screen using archilogic product 3d models, created with app-creator.
+          a(href='https://spaces.archilogic.com/model/archilogic/41fd5tjj?modelResourceId=f27f98b2-e40d-4f68-8527-ecdbdecaeadd')
+            img(src='img/use-case-portfolio.jpg', style='margin-top: 20px; width: 100%;')
+            .overlay
+            h3 Interior Design Portfolio
+            //- p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
       .six.columns
         .example
-          img(src='img/use-case-portfolio.jpg', style='margin-top: 20px; width: 100%;')
-          h3 Interior Design Protfolio
-          //- p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+          a(href='https://spaces.archilogic.com/model/archilogic/k02on21n?modelResourceId=4bb4f090-1c1f-4ccb-b9b0-ad3495a3ead8')
+            img(src='img/use-case-a-frame.jpg', style='margin-top: 20px; width: 100%;')
+            .overlay
+            h3 Content Rich A-Frame App
+            //- p logo, custom loading screen using archilogic product 3d models, created with app-creator.
+
     .row
       .six.columns
         .example
-          img(src='img/use-case-converted-floorplan.jpg', style='margin-top: 20px; width: 100%;')
-          h3 3D Model from Floor Plan
-          //- p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+          a(href='https://spaces.archilogic.com/3d/Virtual_Realty/wrlmmcb9?modelResourceId=8e129488-9015-4c58-b7cf-31c16a784c5e&mode=edit')
+            img(src='img/use-case-virtual-staging-3d-scan.jpg', style='margin-top: 20px; width: 100%;')
+            .overlay
+            h3 Virtually Staged 3D Scan
+            //- p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
       .six.columns
         .example
-          img(src='img/use-case-virtual-staging-3d-scan.jpg', style='margin-top: 20px; width: 100%;')
-          h3 Virtually Staged 3D Scan
-          //- p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+          a(href='https://spaces.archilogic.com/model/archilogic/o4we0zto?modelResourceId=039c930b-946f-45c8-8fdc-3aab4e0b44bb&mode=edit')
+            img(src='img/use-case-converted-floorplan.jpg', style='margin-top: 20px; width: 100%;')
+            .overlay
+            h3 Floor Plan Converted to 3D Model
+            //- p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
 
   .container#products
     //- Read products json and extract data for use in template
@@ -94,9 +103,9 @@ block content
       .seven.columns
         p Building blocks doing one thing at a time an do it well, not a framework but libs and services you can freely combine and mix with other stuff.
         p(style='margin-bottom:26px;')
-          a(href='technology.md') &#9642; More on our tech philosophy
+          a(href='technology.md') &#9642; Tech Philosophy
           br
-          a(href='api.md') &#9642; API reference
+          a(href='api.md') &#9642; API Rseference
     .row
       .four.columns
         +productList(contentManagementProducts)
@@ -109,17 +118,83 @@ block content
     .row
       .seven.columns
         h2 Pricing
-        p(style='margin-bottom:26px;') Our frontend code is open source. All APIs are freemium with generous quotas allowing you to experiment to great extend.
+        p(style='margin-bottom:26px;') Our frontend code is open source. APIs are freemium with generous free quotas. We provide <a href="special-pricing.md">special pricing for certified partners and platforms.</a>.
     .row
       .twelve.columns
-      table(style='background: #ddd; width: 100%;')
+      table(style='width: 100%;')
         tr
-          td(style='width:35%padding: 3px; border: 2px solid white;')
-          td(style='width:13%;padding: 3px; border: 2px solid white;') Free
-          td(style='width:13%;padding: 3px; border: 2px solid white;') Monthly
-          td(style='width:13%;padding: 3px; border: 2px solid white;') Pay As You Go
-          td(style='width:13%;padding: 3px; border: 2px solid white;') Certified Partner
-          td(style='width:13%;padding: 3px; border: 2px solid white;') Enterprise
+          td.desc
+            p(style='font-weight:300; vertical-align: middle;') Products:
+          td.free
+            p Explore
+            p(style='font-weight:300;') A generous dose of 3D
+            p Free
+          td.pro
+            p Professional
+            p(style='font-weight:300;') Grow your user base
+            p $25 / Month
+          td.bus
+            p Business
+            p(style='font-weight:300;') Get what you need
+            p Pay as you go
+        tr
+          td.desc App Creator<br>3D Editor<br>Furniture Library<br>Scene Library<br>Material Library
+          td.free Included
+          td.pro Included
+          td.bus Included
+        tr
+          td.desc Floor Plan to 3D conversion
+          td.free 5
+          td.pro 10
+          td.bus *
+        tr
+          td.desc Matterport Import
+          td.free 10
+          td.pro 50
+          td.bus $ 2
+        tr
+          td.desc 3D Import / Publishing
+          td.free 20
+          td.pro 150
+          td.bus $ 0.50
+        tr
+          td.desc 3D Export
+          td.free 10
+          td.pro 100
+          td.bus $ 0.50
+        tr
+          td.desc 3D Asset Storage (GB transfer)
+          td.free 3
+          td.pro 24
+          td.bus $ 0.20
+        tr
+          td.desc Lightmap Baking - Low Resolution
+          td.free 30
+          td.pro 500
+          td.bus $ 0.15
+        tr
+          td.desc Lightmap Baking - High Resolution
+          td.free 3
+          td.pro 15
+          td.bus $ 3.00
+        tr
+          td.desc Virtual Staging AI
+          td.free 30
+          td.pro 250
+          td.bus $ 0.20
+        tr
+          td.desc 3D Modifiers
+          td.free 30
+          td.pro 250
+          td.bus $ 0.20
+        tr
+          td.desc
+          td.free
+            a.cta Get API Key
+          td.pro
+            a.cta Upgrade
+          td.bus
+            a.cta Bam!!
 
   .container#community
     .row
