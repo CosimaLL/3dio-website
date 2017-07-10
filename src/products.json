@@ -43,7 +43,7 @@
       }
     }
   },{
-    "title": "Scenes Library",
+    "title": "Scene Library",
     "icon": "",
     "category": "Content Management",
     "description": null,
@@ -59,7 +59,20 @@
       }
     }
   },{
-    "title": "2D Floor Plan to 3D conversion",
+    "title": "Material Library",
+    "icon": "",
+    "category": "Content Management",
+    "description": null,
+    "app": {
+      "url": null
+    },
+    "api": {
+      "name": "material",
+      "url": null,
+      "methods": {}
+    }
+  },{
+    "title": "Floor Plan to 3D conversion",
     "icon": "",
     "category": "Content Creation",
     "description": null,
@@ -74,22 +87,7 @@
       }
     }
   },{
-    "title": "Matterport Import",
-    "icon": "",
-    "category": "Content Creation",
-    "description": null,
-    "app": {
-      "url": null
-    },
-    "api": {
-      "name": "matterport",
-      "url": null,
-      "methods": {
-        "import": { "requiresKey": true }
-      }
-    }
-  },{
-    "title": "Data Import",
+    "title": "3D Import / Publishing",
     "icon": "",
     "category": "Content Creation",
     "description": null,
@@ -109,7 +107,7 @@
       }
     }
   },{
-    "title": "Data Export",
+    "title": "3D Export",
     "icon": "",
     "category": "Content Creation",
     "description": null,
@@ -129,7 +127,7 @@
       }
     }
   },{
-    "title": "Data Storage",
+    "title": "3D Asset Storage",
     "icon": "",
     "category": "Content Creation",
     "description": null,
@@ -142,6 +140,21 @@
       "methods": {
         "put": { "requiresKey": "optional" },
         "get": { "requiresKey": false }
+      }
+    }
+  },{
+    "title": "Matterport Import",
+    "icon": "",
+    "category": "Content Creation",
+    "description": null,
+    "app": {
+      "url": null
+    },
+    "api": {
+      "name": "matterport",
+      "url": null,
+      "methods": {
+        "import": { "requiresKey": true }
       }
     }
   },{
@@ -178,7 +191,7 @@
       }
     }
   },{
-    "title": "Modify 3D Data",
+    "title": "3D Modifiers",
     "icon": "",
     "category": "Content Enhancement",
     "description": null,
