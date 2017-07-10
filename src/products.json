@@ -1,0 +1,95 @@
+{
+  "domain": "3d.io",
+  "products": [{
+    "title": "App Creator",
+    "icon": "",
+    "category": "Content Management",
+    "appUrl": null,
+    "apiUrl": null,
+    "description": null
+  },{
+    "title": "3D Editor",
+    "icon": "",
+    "category": "Content Management",
+    "appUrl": "https://spaces.archilogic.com/model",
+    "apiUrl": null,
+    "description": null
+  },{
+    "title": "Dashboard",
+    "icon": "",
+    "category": "Content Management",
+    "appUrl": "https://spaces.archilogic.com",
+    "apiUrl": null,
+    "description": null
+  },{
+    "title": "Furniture Library",
+    "icon": "",
+    "category": "Content Management",
+    "appUrl": "https://spaces.archilogic.com/products",
+    "apiUrl": null,
+    "description": null
+  },{
+    "title": "Scenes Library",
+    "icon": "",
+    "category": "Content Management",
+    "appUrl": "https://spaces.archilogic.com/explore",
+    "apiUrl": null,
+    "description": null
+  },{
+    "title": "2D Floor Plan to 3D conversion",
+    "icon": "",
+    "category": "Content Creation",
+    "appUrl": "https://spaces.archilogic.com/order",
+    "apiUrl": "https://docs.archilogic.com/en/api/reference/requestmodel",
+    "description": null
+  },{
+    "title": "Matterport Import",
+    "icon": "",
+    "category": "Content Creation",
+    "appUrl": null,
+    "apiUrl": null,
+    "description": null
+  },{
+    "title": "Data Import",
+    "icon": "",
+    "category": "Content Creation",
+    "appUrl": "https://docs.archilogic.com/en/3d-editor/custom-3d-data/import.html",
+    "apiUrl": null,
+    "description": null
+  },{
+    "title": "Data Export",
+    "icon": "",
+    "category": "Content Creation",
+    "appUrl": "https://docs.archilogic.com/en/3d-editor/export/",
+    "apiUrl": null,
+    "description": null
+  },{
+    "title": "Data Storage",
+    "icon": "",
+    "category": "Content Creation",
+    "appUrl": null,
+    "apiUrl": null,
+    "description": null
+  },{
+    "title": "Lightmap Baking",
+    "icon": "",
+    "category": "Content Enhancement",
+    "appUrl": "https://docs.archilogic.com/en/3d-editor/lighting/",
+    "apiUrl": null,
+    "description": null
+  },{
+    "title": "Virtual Staging AI",
+    "icon": "",
+    "category": "Content Enhancement",
+    "appUrl": null,
+    "apiUrl": null,
+    "description": null
+  },{
+    "title": "3D Filters",
+    "icon": "",
+    "category": "Content Enhancement",
+    "appUrl": "https://docs.archilogic.com/en/3d-editor/lighting/",
+    "apiUrl": null,
+    "description": null
+  }]
+}

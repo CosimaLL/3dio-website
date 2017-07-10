@@ -1,7 +1,9 @@
 extends layout/main.pug
 
+
 block head
   link(href='css/index-page.css', rel='stylesheet')
+
 
 block content
   .container
@@ -45,19 +47,51 @@ block content
         p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
 
   .container#products
+    //- Read products json and extract data for use in template
+    -
+      var productsJson = require('../src/products.json')
+      function getByCategory(category) {
+      return productsJson.products.reduce(function(a, b){
+      return b.category === category ? a.concat(b) : a
+      }, [])
+      }
+      var contentManagementProducts = getByCategory('Content Management')
+      var contentCreationProducts = getByCategory('Content Creation')
+      var contentEnhancementProducts = getByCategory('Content Enhancement')
+
+    //- Mixin (html template for product lists
+    mixin productList(products)
+      each p in products
+        .product
+          .left
+            .icon
+          .right
+            h4= p.title
+            .badges
+              if p.appUrl
+                a(href=p.appUrl).app App
+              if p.apiUrl
+                a(href=p.apiUrl).api API
+              if !p.appUrl && !p.apiUrl
+                | (coming soon)
+
+    //- list products
     .row
       .twelve.columns
         h2 Products
     .row
       .four.columns
-        p Content Management
-        p
+        p Content Management:
+        br
+        +productList(contentManagementProducts)
       .four.columns
-        p Content Creation
-        p
+        p Content Creation:
+        br
+        +productList(contentCreationProducts)
       .four.columns
-        p Content Supercharging
-        p
+        p Content Supercharging:
+        br
+        +productList(contentEnhancementProducts)
 
   .container
     .row

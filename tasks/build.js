@@ -91,7 +91,8 @@ function renderPug () {
     let html = pug.render(pugText, {
       filename: inputFile.path,
       pretty: debug,
-      githubLink: getGithubEditLink(inputFile)
+      githubLink: getGithubEditLink(inputFile),
+      require: require
     })
     // remap relative links and markdown links
     html = remapLinks(html)
