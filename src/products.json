@@ -4,92 +4,194 @@
     "title": "App Creator",
     "icon": "",
     "category": "Content Management",
-    "appUrl": null,
-    "apiUrl": null,
-    "description": null
+    "description": null,
+    "app": {
+      "url": null
+    },
+    "api": {
+      "name": "appCreator",
+      "url": null,
+      "methods": {}
+    }
   },{
     "title": "3D Editor",
     "icon": "",
     "category": "Content Management",
-    "appUrl": "https://spaces.archilogic.com/model/template/new",
-    "apiUrl": null,
-    "description": null
-  },{
-    "title": "Dashboard",
-    "icon": "",
-    "category": "Content Management",
-    "appUrl": "https://spaces.archilogic.com/dashboard",
-    "apiUrl": null,
-    "description": null
+    "description": null,
+    "app": {
+      "url": "https://spaces.archilogic.com/model/template/new"
+    },
+    "api": {
+      "name": "editor",
+      "url": null,
+      "methods": {}
+    }
   },{
     "title": "Furniture Library",
     "icon": "",
     "category": "Content Management",
-    "appUrl": "https://spaces.archilogic.com/products",
-    "apiUrl": null,
-    "description": null
+    "description": null,
+    "app": {
+      "url": "https://spaces.archilogic.com/products"
+    },
+    "api": {
+      "name": "furniture",
+      "url": null,
+      "methods": {
+        "search": { "requiresKey": "optional" },
+        "read": { "requiresKey": "optional" }
+      }
+    }
   },{
     "title": "Scenes Library",
     "icon": "",
     "category": "Content Management",
-    "appUrl": "https://spaces.archilogic.com/explore",
-    "apiUrl": null,
-    "description": null
+    "description": null,
+    "app": {
+      "url": "https://spaces.archilogic.com/explore"
+    },
+    "api": {
+      "name": "scene",
+      "url": null,
+      "methods": {
+        "list": { "requiresKey": "optional" },
+        "read": { "requiresKey": "optional" }
+      }
+    }
   },{
     "title": "2D Floor Plan to 3D conversion",
     "icon": "",
     "category": "Content Creation",
-    "appUrl": "https://spaces.archilogic.com/order",
-    "apiUrl": "https://docs.archilogic.com/en/api/reference/requestmodel",
-    "description": null
+    "description": null,
+    "app": {
+      "url": "https://spaces.archilogic.com/order"
+    },
+    "api": {
+      "name": "floorPlanTo3d",
+      "url": "https://docs.archilogic.com/en/api/reference/requestmodel",
+      "methods": {
+        "convert": { "requiresKey": true }
+      }
+    }
   },{
     "title": "Matterport Import",
     "icon": "",
     "category": "Content Creation",
-    "appUrl": null,
-    "apiUrl": null,
-    "description": null
+    "description": null,
+    "app": {
+      "url": null
+    },
+    "api": {
+      "name": "matterport",
+      "url": null,
+      "methods": {
+        "import": { "requiresKey": true }
+      }
+    }
   },{
     "title": "Data Import",
     "icon": "",
     "category": "Content Creation",
-    "appUrl": "https://docs.archilogic.com/en/3d-editor/custom-3d-data/import.html",
-    "apiUrl": null,
-    "description": null
+    "description": null,
+    "app": {
+      "url": "https://docs.archilogic.com/en/3d-editor/custom-3d-data/import.html"
+    },
+    "api": {
+      "name": "import",
+      "url": null,
+      "methods": {
+        "obj": { "requiresKey": false },
+        "ifc": { "requiresKey": false },
+        "gltf": { "requiresKey": false },
+        "3ds": { "requiresKey": false },
+        "fbx": { "requiresKey": false },
+        "dae": { "requiresKey": false }
+      }
+    }
   },{
     "title": "Data Export",
     "icon": "",
     "category": "Content Creation",
-    "appUrl": "https://docs.archilogic.com/en/3d-editor/export/",
-    "apiUrl": null,
-    "description": null
+    "description": null,
+    "app": {
+      "url": "https://docs.archilogic.com/en/3d-editor/export/"
+    },
+    "api": {
+      "name": "export",
+      "url": null,
+      "methods": {
+        "obj": { "requiresKey": true },
+        "gltf": { "requiresKey": true },
+        "ifc": { "requiresKey": true },
+        "3ds": { "requiresKey": true },
+        "fbx": { "requiresKey": true },
+        "dae": { "requiresKey": true }
+      }
+    }
   },{
     "title": "Data Storage",
     "icon": "",
     "category": "Content Creation",
-    "appUrl": null,
-    "apiUrl": null,
-    "description": null
+    "description": null,
+    "app": {
+      "url": null
+    },
+    "api": {
+      "name": "storage",
+      "url": null,
+      "methods": {
+        "put": { "requiresKey": "optional" },
+        "get": { "requiresKey": false }
+      }
+    }
   },{
     "title": "Lightmap Baking",
     "icon": "",
     "category": "Content Enhancement",
-    "appUrl": "https://docs.archilogic.com/en/3d-editor/lighting/",
-    "apiUrl": null,
-    "description": null
+    "description": null,
+    "app": {
+      "url": "https://docs.archilogic.com/en/3d-editor/lighting/"
+    },
+    "api": {
+      "name": "baking",
+      "url": null,
+      "methods": {
+        "calculateLoRes": { "requiresKey": true },
+        "calculateHiRes": { "requiresKey": true }
+      }
+    }
   },{
     "title": "Virtual Staging AI",
     "icon": "",
     "category": "Content Enhancement",
-    "appUrl": null,
-    "apiUrl": null,
-    "description": null
+    "description": null,
+    "app": {
+      "url": null
+    },
+    "api": {
+      "name": "virtualStaging",
+      "url": null,
+      "methods": {
+        "furnish": { "requiresKey": true },
+        "shuffle": { "requiresKey": true },
+        "fitSpaces": { "requiresKey": true }
+      }
+    }
   },{
-    "title": "3D Filters",
+    "title": "Modify 3D Data",
     "icon": "",
     "category": "Content Enhancement",
-    "appUrl": "https://docs.archilogic.com/en/3d-editor/lighting/",
-    "apiUrl": null,
-    "description": null
+    "description": null,
+    "app": {
+      "url": null
+    },
+    "api": {
+      "name": "modify",
+      "url": null,
+      "methods": {
+        "origami": { "requiresKey": true },
+        "reduce": { "requiresKey": true }
+      }
+    }
   }]
 }

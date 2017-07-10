@@ -1,8 +1,13 @@
 #menu-top-shadow {
+
+    // only visible on desktop menu version
+    @media (min-width: @screenIpad) { & { display: block; } }
+
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
+    width: 100%;
     height: 40px;
     box-shadow: 0 0 2px 2px rgba(0,0,0,0.3);
     opacity: 0;
@@ -12,49 +17,146 @@
 
 #menu-top {
 
-    @text-color: #777;
+    @height: 40px;
+
+    @desktop-text-color: #777;
+    @desktop-text-hover-color: #000;
+    @desktop-bg-color: #fff;
+
+    @mobile-text-color: #eee;
+    @mobile-bg-color: #1B2023;
 
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    height: 40px;
-    line-height: 40px;
+    width: 100%;
+    height: @height;
+    line-height: @height;
     text-align: center;
-
-    color: @text-color;
     font-weight: 400;
 
-    background-color: white;
+    // mobile
+    color: @mobile-text-color;
+    background-color: @mobile-bg-color;
+    // desktop
+    @media (min-width: @screenIpad) {
+        color: @desktop-text-color;
+        background-color: @desktop-bg-color;
+    }
 
     a {
-        color: @text-color;
         text-decoration: none;
-        &:hover {
-            color: #000;
+        // mobile
+        color: @mobile-text-color;
+        // desktop
+        @media (min-width: @screenIpad) {
+            color: @desktop-text-color;
+            &:hover {
+                color: @desktop-text-hover-color;
+            }
+        }
+    }
+
+    #hamburger-button {
+        // desktop
+        display: none;
+        // mobile
+        @media (max-width: @screenIpad) {
+            display: block;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            height: @height;
+            width: @height;
+            background: url('../img/icon-hamburger-white.svg');
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    #items {
+        -webkit-transition: transform 800ms, opacity 800ms;
+        transition: transform 800ms, opacity 800ms;
+        -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        // desktop
+        display: inline-block;
+        transform: translateX(0px);
+        // mobile
+        @media (max-width: @screenIpad) {
+            position: absolute;
+            top: @height;
+            left: 0;
+            transform: translateX(-220px);
+            width: 200px;
+            background-color: @mobile-bg-color;
+        }
+        a {
+            cursor: pointer;
+            // desktop
+            padding: 0 10px 0 10px;
+            // mobile
+            @media (max-width: @screenIpad) {
+                display: block;
+                padding: 12px;
+                border-top: 1px solid #666;
+            }
+        }
+        .spacer {
+            // mobile
+            display: none;
+            // desktop
+            @media (min-width: @screenIpad) {
+                display: inline-block;
+            }
+        }
+    }
+
+    #brand {
+        // desktop: left
+        position: relative;
+        display: inline-block;
+        // mobile: center
+        @media (min-width: @screenIpad) {
+            position: absolute;
+            display: block;
+            padding-left: 10px;
+            top: 0;
+            left: 0;
         }
     }
 
     .spacer {
-        display: inline;
-        margin: 0 12px 0 12px;
+        display: inline-block;
+        margin: 0;
         &:after {
             content: "|";
-            color: hsl(hue(@text-color), saturation(@text-color), 0.8)
+        }
+        // mobile
+        &:after {
+            color: hsl(hue(@mobile-text-color), saturation(@mobile-text-color), 0.8)
+        }
+        // desktop
+        @media (min-width: @screenIpad) {
+            &:after {
+                color: hsl(hue(@desktop-text-color), saturation(@desktop-text-color), 0.8)
+            }
         }
     }
 
-    .left {
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding-left: 10px;
-    }
-
-    .right {
+    #user {
+        display: block;
         position: absolute;
         top: 0;
         right: 0;
-        padding-right: 10px;
+        padding-right: 2px;
+        cursor: pointer;
+        a {
+            padding: 0 10px 0 10px;
+        }
     }
+
 }

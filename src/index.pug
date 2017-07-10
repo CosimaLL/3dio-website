@@ -51,7 +51,7 @@ block content
           //- p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
       .six.columns
         .example
-          img(src='img/use-case-converted-floorplan.jpg', style='margin-top: 20px; width: 100%;')
+          img(src='img/use-case-virtual-staging-3d-scan.jpg', style='margin-top: 20px; width: 100%;')
           h3 Virtually Staged 3D Scan
           //- p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
 
@@ -74,14 +74,16 @@ block content
         .product
           .left
             .icon
+              if p.icon
+                img(src=p.icon)
           .right
             h4= p.title
             .badges
-              if p.appUrl
-                a(href=p.appUrl, target='_blank').app App
-              if p.apiUrl
-                a(href=p.apiUrl).api API
-              if !p.appUrl && !p.apiUrl
+              if p.app.url
+                a(href=p.app.url, target='_blank').app App
+              if p.api.url
+                a(href=p.api.url).api API
+              if !p.app.url && !p.api.url
                 | (coming soon)
 
     //- list products
@@ -105,8 +107,9 @@ block content
 
   .container#pricing
     .row
-      .twelve.columns
+      .seven.columns
         h2 Pricing
+        p(style='margin-bottom:26px;') Our frontend code is open source. All APIs are freemium with generous quotas allowing you to experiment to great extend.
     .row
       .twelve.columns
       table(style='background: #ddd; width: 100%;')
