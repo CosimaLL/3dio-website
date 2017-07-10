@@ -11,14 +11,14 @@
     "title": "3D Editor",
     "icon": "",
     "category": "Content Management",
-    "appUrl": "https://spaces.archilogic.com/model",
+    "appUrl": "https://spaces.archilogic.com/model/template/new",
     "apiUrl": null,
     "description": null
   },{
     "title": "Dashboard",
     "icon": "",
     "category": "Content Management",
-    "appUrl": "https://spaces.archilogic.com",
+    "appUrl": "https://spaces.archilogic.com/dashboard",
     "apiUrl": null,
     "description": null
   },{
