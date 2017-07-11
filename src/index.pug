@@ -35,47 +35,42 @@ block content
     .row
       .six.columns
         .example
-          a(href='https://spaces.archilogic.com/model/archilogic/41fd5tjj?modelResourceId=f27f98b2-e40d-4f68-8527-ecdbdecaeadd')
+          a(href='use-case/interior-design-portfolio-webvr.md')
             img(src='img/use-case-portfolio.jpg', style='margin-top: 20px; width: 100%;')
             .overlay
             h3 Interior Design Portfolio in WebVR
-            //- p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
       .six.columns
         .example
-          a(href='https://spaces.archilogic.com/model/archilogic/k02on21n?modelResourceId=4bb4f090-1c1f-4ccb-b9b0-ad3495a3ead8')
+          a(href='use-case/a-frame-app-with-lightmaps.md')
             img(src='img/use-case-a-frame.jpg', style='margin-top: 20px; width: 100%;')
             .overlay
             h3 Content Rich A-Frame App with Lightmaps
-            //- p logo, custom loading screen using archilogic product 3d models, created with app-creator.
-
     .row
       .six.columns
         .example
-          a(href='https://spaces.archilogic.com/3d/Virtual_Realty/wrlmmcb9?modelResourceId=8e129488-9015-4c58-b7cf-31c16a784c5e&mode=edit')
+          a(href='use-case/virtually-staged-3d-scan.md')
             img(src='img/use-case-virtual-staging-3d-scan.jpg', style='margin-top: 20px; width: 100%;')
             .overlay
             h3 Virtually Staged 3D Scan
-            //- p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
       .six.columns
         .example
-          a(href='https://spaces.archilogic.com/model/archilogic/o4we0zto?modelResourceId=039c930b-946f-45c8-8fdc-3aab4e0b44bb&mode=edit')
+          a(href='use-case/floor-plan-converted-to-editable-3d-model.md')
             img(src='img/use-case-converted-floorplan.jpg', style='margin-top: 20px; width: 100%;')
             .overlay
             h3 Floor Plan Converted to Editable 3D Model
-            //- p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
 
   .container#products
     //- Read products json and extract data for use in template
     -
       var productsJson = require('../src/products.json')
       function getByCategory(category) {
-      return productsJson.products.reduce(function(a, b){
-      return b.category === category ? a.concat(b) : a
-      }, [])
+        return productsJson.products.reduce(function(a, b){
+          return b.category === category ? a.concat(b) : a
+        }, [])
       }
-      var contentManagementProducts = getByCategory('Content Management')
-      var contentCreationProducts = getByCategory('Content Creation')
-      var contentEnhancementProducts = getByCategory('Content Enhancement')
+      var experiences = getByCategory('experiences')
+      var content1 = getByCategory('content').slice(0,5)
+      var content2 = getByCategory('content').slice(5)
 
     //- Mixin (html template for product lists
     mixin productList(products)
@@ -108,11 +103,17 @@ block content
           a(href='api.md') &#9642; API Rseference
     .row
       .four.columns
-        +productList(contentManagementProducts)
+        p Build Experiences:
+        br
+        +productList(experiences)
       .four.columns
-        +productList(contentCreationProducts)
+        p Get 3D Content:
+        br
+        +productList(content1)
       .four.columns
-        +productList(contentEnhancementProducts)
+        p ...
+        br
+        +productList(content2)
 
   .container#pricing
     .row
