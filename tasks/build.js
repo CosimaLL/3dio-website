@@ -26,7 +26,7 @@ const debug = true
 const src = {
   pug: [
     'src/**/*.pug',
-    '!src/layout/**/**'
+    '!src/pug-common/**/**'
   ],
   pugWatch: [
     'src/**/*.pug',
@@ -42,8 +42,8 @@ const src = {
   ],
   staticContent: [
     'src/**/**',
-    '!src/layout',
-    '!src/layout/**/**',
+    '!src/pug-common',
+    '!src/pug-common/**/**',
     '!src/**/*.pug',
     '!src/**/*.md',
     '!src/**/*.less'
@@ -117,7 +117,7 @@ function renderMarkdown () {
     marked(markdownText, (err, content) => {
       if (err) return cb(err)
       // render pug to html
-      var pugPath = path.resolve(process.cwd(), 'src/layout/md-wrapper.pug')
+      var pugPath = path.resolve(process.cwd(), 'src/pug-common/md-wrapper.pug')
       html = pug.renderFile(pugPath, {
         filename: pugPath,
         cache: true,
