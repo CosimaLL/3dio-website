@@ -54,6 +54,22 @@
         color: #444;
     }
 
+    .keep-iframe-ratio {
+        width: 100%;
+        position: relative;
+        margin-bottom: 16px;
+        svg {
+            width: 100%;
+        }
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
     @import "common/code-highlight.less";
 
 }
