@@ -2,7 +2,7 @@
 -
   if (!title) title = '3d.io'
   if (!description) description = 'Toolkit for 3d interior web apps.'
-  var image = 'img/social.png'
+  var image = urlPathRoot+'/img/social.png'
 
 //- classics
 title #{title}
@@ -17,14 +17,14 @@ meta(name='theme-color', content='#ffffff')
 meta(name='viewport', content='width=device-width, initial-scale=1')
 
 //- icons
-link(rel='shortcut icon' href='favicon.ico')
-link(rel='icon', type='image/png', href='img/favicon-black-16px.png', sizes='16x16')
-link(rel='icon', type='image/png', href='img/favicon-black-32px.png', sizes='32x32')
-link(rel='icon', type='image/png', href='favicon.png', sizes='48x48')
-link(rel='icon', type='image/png', href='img/favicon-black-64px.png', sizes='64x64')
-link(rel='icon', type='image/png', href='img/favicon-black-128px.png', sizes='128x128')
-link(rel='icon', type='image/png', href='img/favicon-black-192px.png', sizes='192x192')
-link(rel='apple-touch-icon' href='img/apple-touch-icon-180px.png')
+link(rel='shortcut icon' href=urlPathRoot+'/favicon.ico')
+link(rel='icon', type='image/png', href=urlPathRoot+'/img/favicon-black-16px.png', sizes='16x16')
+link(rel='icon', type='image/png', href=urlPathRoot+'/img/favicon-black-32px.png', sizes='32x32')
+link(rel='icon', type='image/png', href=urlPathRoot+'/favicon.png', sizes='48x48')
+link(rel='icon', type='image/png', href=urlPathRoot+'/img/favicon-black-64px.png', sizes='64x64')
+link(rel='icon', type='image/png', href=urlPathRoot+'/img/favicon-black-128px.png', sizes='128x128')
+link(rel='icon', type='image/png', href=urlPathRoot+'/img/favicon-black-192px.png', sizes='192x192')
+link(rel='apple-touch-icon' href=urlPathRoot+'/img/apple-touch-icon-180px.png')
 
 //- open graph
 meta(property='og:site_name' content=title)
@@ -44,13 +44,13 @@ meta(property='twitter:domain' content='3d.io')
 meta(property='twitter:domain' content='3d.io')
 
 //- scripts
-script(src='js/jquery-3.2.1.min.js')
-script(src='js/menu-top.js')
+script(src=urlPathRoot+'/js/jquery-3.2.1.min.js')
+script(src=urlPathRoot+'/js/menu-top.js')
 
 //- fonts
-link(href='font/fira/fira-mono.css', rel='stylesheet')
-link(href='font/fira/fira-sans.css', rel='stylesheet')
-link(href='font/roboto/roboto-condensed.css', rel='stylesheet')
+link(href=urlPathRoot+'/font/fira/fira-mono.css', rel='stylesheet')
+link(href=urlPathRoot+'/font/fira/fira-sans.css', rel='stylesheet')
+link(href=urlPathRoot+'/font/roboto/roboto-condensed.css', rel='stylesheet')
 
 //- stylesheets
-link(href='css/common.css', rel='stylesheet')
+link(href=urlPathRoot+'/css/common.css', rel='stylesheet')

@@ -16,7 +16,7 @@ const gitBranchName = process.env.TRAVIS_BRANCH || execSync(`git rev-parse --abb
 const gitCommitSha1 = execSync(`git rev-parse HEAD`).toString('utf8').replace('\n', '')
 // only branches deployed by CI have root directories
 // all other environments are running on root dir
-const rootDir = process.env.TRAVIS_BRANCH && process.env.TRAVIS_BRANCH !== 'master' ? '/branch/'+process.env.TRAVIS_BRANCH : ''
+const urlPathRoot = process.env.TRAVIS_BRANCH && process.env.TRAVIS_BRANCH !== 'master' ? '/branch/'+process.env.TRAVIS_BRANCH : ''
 
 /*
  * configs
@@ -89,10 +89,14 @@ function renderPug () {
     const pugText = inputFile.contents.toString(enc)
     // render pug to html
     let html = pug.render(pugText, {
+      // pug options
       filename: inputFile.path,
       pretty: debug,
-      githubLink: getGithubEditLink(inputFile),
-      require: require
+      // pass require function so that we can use it inside templates to load json files
+      require: require,
+      // template variables
+      urlPathRoot: urlPathRoot,
+      githubLink: getGithubEditLink(inputFile)
     })
     // remap relative links and markdown links
     html = remapLinks(html)
@@ -113,16 +117,21 @@ function renderMarkdown () {
     if (!inputFile.isBuffer()) return
     // decode text from vinyl object
     const markdownText = inputFile.contents.toString(enc)
+    const urlPath = urlPathRoot+'/'+inputFile.path.substr(inputFile.base.length)
+    const urlPathDir = path.dirname(urlPath)+'/'
     // convert markdown to html
     marked(markdownText, (err, content) => {
       if (err) return cb(err)
       // render pug to html
-      var pugPath = path.resolve(process.cwd(), 'src/pug-common/md-wrapper.pug')
-      html = pug.renderFile(pugPath, {
-        filename: pugPath,
+      var pugMarkdownWrapper = path.resolve(process.cwd(), 'src/pug-common/md-wrapper.pug')
+      html = pug.renderFile(pugMarkdownWrapper, {
+        // pug options
+        filename: pugMarkdownWrapper,
         cache: true,
         pretty: debug,
+        // template variables
         content: content,
+        urlPathRoot: urlPathRoot,
         githubLink: getGithubEditLink(inputFile)
       })
       // remap relative links and markdown links
@@ -170,7 +179,7 @@ function remapLinks (html) {
       return tag.replace(
         url,
         //'https://3d.io/' + (url[0] !== '/' ? url : url.substr(1))
-        rootDir + (url[0] === '/' ? url : '/' + url)
+        urlPathRoot + (url[0] === '/' ? url : '/' + url)
       ).replace(
         mdExtensionInUrlRegex,
         '.html'
