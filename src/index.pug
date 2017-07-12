@@ -17,7 +17,7 @@ block content
         a(href='https://spaces.archilogic.com/order') Publish 3d models
       .six.columns
         img(src='img/title-pic.png', style='margin-top: 20px; width: 100%; max-width: 400px;')
-    .row
+    .row.claims
       .four.columns
         h2 Instant Content
         p Focus on creation by remixing <a href="https://spaces.archilogic.com/products">beautifully crafted 3d models</a> of real furniture and scenes from our wast data sets. To keeps things simple we packaged all of that into <a href="https://github.com/archilogic-com/base-for-aframe">open sourced A-Frame components</a>. Simply <a href="https://base-for-aframe.glitch.me/about">give it a try</a> and even <a href="https://docs.archilogic.com/en/tutorials/custom-3d-content/index.html">import your own 3d models via drag&drop</a> or <a href="">API</a>. You have a good old 2D floor plan? Perfect: we <a href="https://spaces.archilogic.com/order">convert it to 3D for free</a>.
@@ -37,27 +37,23 @@ block content
         .example
           a(href='use-case/interior-design-portfolio-webvr.md')
             img(src='img/use-case-portfolio.jpg', style='margin-top: 20px; width: 100%;')
-            .overlay
-            h3 Interior Design Portfolio in WebVR
+            p Interior Design Portfolio in WebVR
       .six.columns
         .example
           a(href='use-case/a-frame-app-with-lightmaps.md')
             img(src='img/use-case-a-frame.jpg', style='margin-top: 20px; width: 100%;')
-            .overlay
-            h3 Content Rich A-Frame App with Lightmaps
+            p Content Rich A-Frame App with Lightmaps
     .row
       .six.columns
         .example
           a(href='use-case/virtually-staged-3d-scan.md')
             img(src='img/use-case-virtual-staging-3d-scan.jpg', style='margin-top: 20px; width: 100%;')
-            .overlay
-            h3 Virtually Staged 3D Scan
+            p Virtually Staged 3D Scan
       .six.columns
         .example
           a(href='use-case/floor-plan-converted-to-editable-3d-model.md')
             img(src='img/use-case-converted-floorplan.jpg', style='margin-top: 20px; width: 100%;')
-            .overlay
-            h3 Floor Plan Converted to Editable 3D Model
+            p Floor Plan Converted to Editable 3D Model
 
   .container#products
     //- Read products json and extract data for use in template
@@ -77,7 +73,7 @@ block content
       each p in products
         .product
           .left
-            .icon
+            .icon(class=p.category)
               if p.icon
                 img(src=p.icon)
           .right
@@ -97,22 +93,18 @@ block content
     .row
       .seven.columns
         p Building blocks doing one thing at a time an do it well, not a framework but libs and services you can freely combine and mix with other stuff.
-        p(style='margin-bottom:26px;')
-          a(href='technology.md') &#9642; Tech Philosophy
-          br
-          a(href='api.md') &#9642; API Rseference
-    .row
+        p(style='margin-bottom:0px;') <a href='api.md'> API Reference</a> | <a href='technology.md'>Our Tech Philosophy</a>
+    .row.list
       .four.columns
-        p Build Experiences:
+        h2 Build Experiences:
         br
         +productList(experiences)
       .four.columns
-        p Get 3D Content:
+        h2 Get 3D Content:
         br
         +productList(content1)
       .four.columns
-        p ...
-        br
+        <svg class="spacer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"></svg>
         +productList(content2)
 
   .container#pricing
