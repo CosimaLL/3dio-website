@@ -1,11 +1,15 @@
 #footer {
 
+    @bg-color: #ddd;
+    @text-color: #888;
+    @text-color-hover: black;
+
     width: 100%;
     padding: 60px 0 60px 0;
     min-height: 25vh;
-    color: #777;
-    background: #eee;
-    font-weight: 400;
+    color: @text-color;
+    background: @bg-color;
+    font-weight: 300;
     line-height: 1.5;
 
     .columns {
@@ -13,16 +17,36 @@
     }
 
     a {
-        color: #777;
+        color: @text-color;
         text-decoration: none;
         &:hover{
-            color: #000;
+            color: @text-color-hover;
             text-decoration: underline;
         }
     }
 
-    .button {
-        margin: 3px 6px 3px 6px;
+    .social {
+        margin-top: 10px;
+        svg {
+            height: 24px;
+            margin-right: 6px;
+            fill: @text-color;
+            &:hover {
+                fill: @text-color-hover;
+            }
+        }
+    }
+
+    .logo-archilogic {
+        height: 90px;
+        margin-bottom: 16px;
+        svg {
+            height: 100%;
+            fill: @text-color;
+            &:hover {
+                fill: @text-color-hover;
+            }
+        }
     }
 
     .friends {
