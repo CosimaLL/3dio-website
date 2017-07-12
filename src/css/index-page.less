@@ -2,6 +2,8 @@
 
 #content {
 
+    @text-color: #777;
+
     padding: 80px 0 50px 0;
     min-height: 80vh;
     background: white;
@@ -9,7 +11,7 @@
     font-family: "Fira Sans", Helvetica, Arial, sans-serif;
     font-weight: 300;
     line-height: 1.3;
-    color: #777;
+    color: @text-color;
 
     .container {
         padding-top: 40px;
@@ -39,6 +41,7 @@
     }
     h2 {
         font-size: 28px;
+        margin-bottom: 12px;
     }
     h3, h4 {
         padding-top: 10px;
@@ -50,9 +53,7 @@
         margin-bottom: 20px;
         text-align: center;
         @media (min-width: @screenIpad) {
-            & {
-                text-align: left;
-            }
+            text-align: left;
         }
 
         a {
@@ -66,7 +67,7 @@
             background: @pltfrm-blue-50;
             border-radius: 3px;
             margin: 0 6px 6px 0;
-            text-shadow: 2px 2px 0 0 rgba(0,0,0,0);
+            text-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0);
             border-bottom: 2px solid @pltfrm-blue-50;
         }
         a:hover {
@@ -78,94 +79,110 @@
 
         .spacer {
             display: none;
-        }
-        @media (min-width: @screenIpad) {
-            .spacer {
+            // show spacer on desktop only
+            @media (min-width: @screenIpad) {
                 display: block;
             }
         }
+
 
     }
 
+    .claims {
+        h2 {
+            margin-bottom: 0px;
+        }
+    }
+
     #use-cases {
-        position: relative;
+        h2 {
+            margin-bottom: 6px;
+        }
         .example {
             position: relative;
-            padding-bottom: 30px;
+            margin-bottom: 0px;
+            a {
+                color: @text-color;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
             img {
                 position: relative;
+                //box-shadow: 5px 5px 0 0 rgba(0,0,0,0.13);
+                //box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.3);
             }
-            .overlay {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: 40px;
-                //background: rgba(0,0,0,0.7);
-                background: white;
-            }
-            h3 {
-                position: absolute;
-                display: block;
-                bottom: 12px;
-                width: 100%;
-                text-align: center;
-                //background: rgba(255,255,255,0.75);
-                //background: rgba(0,0,0,0.75);
-                //text-shadow: 2px 2px 5px rgba(255,255,255,1);
-                //color: white;
+            p {
+                margin-top: 6px;
                 font-weight: 300;
-                //text-shadow: 1px 1px 5px rgba(0,0,0,1);
             }
         }
     }
 
     #products {
 
-        h2 {
-            margin-bottom: 10px;
-        }
+        .list {
+            h2 {
 
+            }
+        }
         .product {
             display: flex;
             align-items: flex-end;
             margin-bottom: 20px;
             .left {
-                margin-right: 8px;
+                margin-right: 12px;
                 .icon {
-                    width:64px;
-                    height:64px;
-                    background: #ddd;
+                    width: 60px;
+                    height: 70px;
                     border: 0;
-                    border-radius: 50%;
+                    background-size: auto 100%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                .experiences {
+                    background-image: url('../img/icon-product-experience.svg');
+                }
+                .content {
+                    background-image: url('../img/icon-product-content.svg');
                 }
             }
             .right {
-                padding-bottom: 7px;
+                padding-bottom: 17px;
                 h4 {
-                    margin-bottom: 4px;
+                    margin-bottom: 3px;
                 }
                 .badges {
-                    line-height: 24px;
+                    line-height: 18px;
                     a {
                         text-decoration: none;
                     }
                     .app, .api {
                         display: inline-block;
-                        height: 24px;
+                        height: 18px;
                         font-weight: 400;
                         color: white;
-                        padding: 0 10px 0 10px;
+                        padding: 0 7px 0 7px;
                         border-radius: 2px;
                         margin-right: 4px;
                     }
                     .app {
-                        background: @pltfrm-green-30;
+                        background: @pltfrm-green-20;
                     }
                     .api {
-                        background: @pltfrm-blue-40;
+                        background: @pltfrm-blue-30;
                     }
                 }
+            }
+        }
+
+        .spacer {
+            height: 87px;
+            display: none;
+            // show spacer on desktop version only
+            @media (min-width: @screenIpad) {
+                display: block;
             }
         }
 
@@ -173,22 +190,13 @@
 
     #technology {
 
-        h2 {
-            margin-bottom: 20px;
-        }
-
-
-
     }
 
     #pricing {
 
-        h2 {
-            margin-bottom: 20px;
-        }
-
         td {
-            padding: 6px 0 6px 0; border: 2px solid white;
+            padding: 6px 0 6px 0;
+            border: 2px solid white;
         }
         .desc {
             width: 40%;
@@ -222,7 +230,8 @@
             background: @pltfrm-blue-50;
             border-radius: 3px;
             margin: 0 6px 6px 0;
-            text-shadow: 2px 2px 0 0 rgba(0,0,0,0);
+            text-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0);
+            white-space: nowrap;
             border-bottom: 2px solid @pltfrm-blue-50;
             &:hover {
                 color: white;
@@ -240,7 +249,6 @@
         }
 
     }
-
 
     @import "common/code-highlight.less";
 
