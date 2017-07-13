@@ -1,19 +1,6 @@
 {
   "domain": "3d.io",
   "products": [{
-    "title": "App Creator",
-    "icon": "",
-    "category": "experiences",
-    "description": null,
-    "app": {
-      "url": "https://app-creator-3dio.herokuapp.com/"
-    },
-    "api": {
-      "name": "appCreator",
-      "url": "https://github.com/archilogic-com/app-creator",
-      "methods": {}
-    }
-  },{
     "title": "A-Frame Components",
     "icon": "",
     "category": "experiences",
@@ -24,6 +11,19 @@
     "api": {
       "name": "aFrame",
       "url": "https://github.com/archilogic-com/base-for-aframe",
+      "methods": {}
+    }
+  },{
+    "title": "App Creator",
+    "icon": "",
+    "category": "experiences",
+    "description": null,
+    "app": {
+      "url": "https://app-creator-3dio.herokuapp.com/"
+    },
+    "api": {
+      "name": "appCreator",
+      "url": "https://github.com/archilogic-com/app-creator",
       "methods": {}
     }
   },{
