@@ -1,4 +1,4 @@
-# Certified Partner Requirements
+# Certified Partner Program
 
 ## Privileges
 
@@ -27,6 +27,6 @@
 * The ability to get those applications deployed so your customers can use them
 * Ability to “wow!” us and your customers with exceptional applications related to buildings and real estate
 
-## Apply
+## Apply Now
 
 [Apply for Certified Partner Program](mailto:partner@archilogic.com)
