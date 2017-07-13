@@ -29,4 +29,4 @@
 
 ## Apply
 
-[Apply for Certified Partner Program](certified-partner-application.md)
+[Apply for Certified Partner Program](partner/apply.md)
