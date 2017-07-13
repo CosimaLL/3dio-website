@@ -24,8 +24,8 @@ You have two options available:
 
 Request a low-resolution light map for a scene:
 ```javascript
-  var DIO = require('3d.io')
-  DIO.Bake.calculateLoRes({
+  var io3d = require('3d.io')
+  io3d.Bake.calculateLoRes({
     // ?
   }).then(console.log)
 ```
@@ -40,8 +40,8 @@ Request a low-resolution light map for a scene:
 
 Request a high-resolution light map for a scene:
 ```javascript
-  var DIO = require('3d.io')
-  DIO.Bake.calculateHiRes({
+  var io3d = require('3d.io')
+  io3d.Bake.calculateHiRes({
     // ?
   }).then(console.log)
 ```

@@ -18,6 +18,6 @@ To make authorized API calls, you provide the API key along with the HTTP reques
 curl -X POST -H 'Content-Type: application/json' -H 'X-API-KEY: YOUR-API-KEY-HERE' -d '...' https://spaces.archilogic.com/api/v2
 ```
 ```javascript
-var DIO = require('3d.io)
-DIO.setApiKey('YOUR-API-KEY-HERE')
+var io3d = require('3d.io)
+io3d.setApiKey('YOUR-API-KEY-HERE')
 ```
