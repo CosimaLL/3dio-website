@@ -14,6 +14,34 @@ You have two options available:
 * A fast, low-resolution lightmap that gives you a great approximation on how the lighting situation could look like
 * A slower, high-resolution lightmap that looks more realistic and polished
 
-## Requesting a lightmap
+## Requesting a low-resolution lightmap
 
-The lightmap baking API will be coming soon...
+| Parameter | Required? | Description |
+| --- | --- | --- |
+| ? | ? | ? |
+
+### Example
+
+Request a low-resolution light map for a scene:
+```javascript
+  var DIO = require('3d.io')
+  DIO.Bake.calculateLoRes({
+    // ?
+  }).then(console.log)
+```
+
+## Requesting a high-resolution lightmap
+
+| Parameter | Required? | Description |
+| --- | --- | --- |
+| ? | ? | ? |
+
+### Example
+
+Request a high-resolution light map for a scene:
+```javascript
+  var DIO = require('3d.io')
+  DIO.Bake.calculateHiRes({
+    // ?
+  }).then(console.log)
+```

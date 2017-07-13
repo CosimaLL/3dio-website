@@ -17,6 +17,11 @@ If a valid API key is supplied, it lists all scenes of your organisation, otherw
 
 The following snippet will return the first 40 public scenes:
 
+```javascript
+  var DIO = require('3d.io')
+  DIO.scenes.list().then(console.log)
+```
+<!--
 ```bash
   curl -X POST -H 'content-type: application/json' -d '{ \
     "json-rpc": 2.0, \
@@ -27,10 +32,7 @@ The following snippet will return the first 40 public scenes:
     } \
   }'
 ```
-```javascript
-  var DIO = require('3d.io')
-  DIO.scenes.list().then(console.log)
-```
+-->
 
 ## Get single scene
 
@@ -48,6 +50,11 @@ API key: **optional**
 
 Retrieves the public scene with the ID `abc123`
 
+```javascript
+  var DIO = require('3d.io')
+  DIO.scenes.get({id: 'abc123' }).then(console.log)
+```
+<!--
 ```bash
   curl -X POST -H 'content-type: application/json' -d '{ \
     "json-rpc": 2.0, \
@@ -60,7 +67,4 @@ Retrieves the public scene with the ID `abc123`
     } \
   }'
 ```
-```javascript
-  var DIO = require('3d.io')
-  DIO.scenes.get({id: 'abc123' }).then(console.log)
-```
+-->
