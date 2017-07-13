@@ -38,7 +38,7 @@ By researching how our 3D content is being used and structured, we were able to 
 ## Community-driven
 
 We are striving to foster the communities around us. We want to enable as many people as possible to build whatever they can dream up.
-That's why we are [open sourcing](https://github.com/archilogic-com) parts of our work, collaborate with communities such as the [A-Frame](https://aframe.io) community and are participating in exchanges on [Stack Overflow](https://stackoverflow.com/), [Reddit](https://www.reddit.com/domain/spaces.archilogic.com/), [Twitter](https://twitter.com/archilogic3d) and [Facebook](https://facebook.com/) and share our experiences as well as select 3D content on [our blog](https://spaces.archilogic.com/blog).
+That's why we are [open sourcing](https://github.com/archilogic-com) parts of our work, collaborate with communities such as the [A-Frame](https://aframe.io) community and are participating in exchanges on [Stack Overflow](https://stackoverflow.com/), [Reddit](https://www.reddit.com/domain/spaces.archilogic.com/), [Twitter](https://twitter.com/archilogic3d) and [Facebook](https://www.facebook.com/archilogic3d) and share our experiences as well as select 3D content on [our blog](https://spaces.archilogic.com/blog).
 
 ## Isomorphic Code
 
