@@ -40,6 +40,23 @@
       "methods": {}
     }
   },{
+    "title": "Home Staging AI",
+    "icon": "",
+    "category": "experiences",
+    "description": null,
+    "app": {
+      "url": null
+    },
+    "api": {
+      "name": "homeStaging",
+      "url": null,
+      "methods": {
+        "furnish": { "requiresKey": true },
+        "shuffle": { "requiresKey": true },
+        "fitSpaces": { "requiresKey": true }
+      }
+    }
+  },{
     "title": "Floor Plan to 3D conversion",
     "icon": "",
     "category": "content",
@@ -184,23 +201,6 @@
       "methods": {
         "calculateLoRes": { "requiresKey": true },
         "calculateHiRes": { "requiresKey": true }
-      }
-    }
-  },{
-    "title": "Virtual Staging AI",
-    "icon": "",
-    "category": "experiences",
-    "description": null,
-    "app": {
-      "url": null
-    },
-    "api": {
-      "name": "virtualStaging",
-      "url": null,
-      "methods": {
-        "furnish": { "requiresKey": true },
-        "shuffle": { "requiresKey": true },
-        "fitSpaces": { "requiresKey": true }
       }
     }
   },{
