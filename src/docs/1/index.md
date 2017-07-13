@@ -9,8 +9,8 @@
  * 3D Export
  * Matterport Import
  * 3D Asset Storage
- * [Furniture Library](docs/api/furniture-library.html)
- * [Scene Library](docs/api/scene-library.html)
+ * [Furniture Library](docs/1/api/furniture-library.html)
+ * [Scene Library](docs/1/api/scene-library.html)
  * Material Library
  * Lightmap Baking
  * 3D Modifiers
