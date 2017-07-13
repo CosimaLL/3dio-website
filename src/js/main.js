@@ -23,8 +23,16 @@ $(function(){
     // title pic animation
     var titleRowHeight = $titleRow.height()
     // at which scroll position in px to start and stop the animation:
-    var animStart = 50
-    var animEnd = titleRowHeight*0.7
+    var titleRowHeight, animStart, animEnd
+    if (titleRowHeight < 450) {
+      // desktop
+      animStart = 40
+      animEnd = 150
+    } else {
+      // mobile
+      animStart = 70
+      animEnd = 500
+    }
     // calculate target positon
     target = Math.min(1, Math.max(0, scrollTop-animStart) / animEnd)
 
@@ -47,16 +55,16 @@ $(function(){
       opacity: 1-current
     })
     $titlePicFurniture.css({
-      '-webkit-transform': 'translateY('+(-0 + current * -55)+'%)',
-      transform: 'translateY('+(-0 + current * -55)+'%)'
+      '-webkit-transform': 'translateY('+(-8 + current * -60)+'%)',
+      transform: 'translateY('+(-8 + current * -60)+'%)'
     })
     $titlePicArch.css({
-      '-webkit-transform': 'translateY('+(30 + current * -8)+'%)',
-      transform: 'translateY('+(30 + current * -8)+'%)'
+      '-webkit-transform': 'translateY('+(21 + current * -8)+'%)',
+      transform: 'translateY('+(21 + current * -8)+'%)'
     })
     $titlePicPlan.css({
-      '-webkit-transform': 'translateY('+(90 + current * 30)+'%)',
-      transform: 'translateY('+(90 + current * 30)+'%)'
+      '-webkit-transform': 'translateY('+(54 + current * 30)+'%)',
+      transform: 'translateY('+(54 + current * 30)+'%)'
     })
   })
 
