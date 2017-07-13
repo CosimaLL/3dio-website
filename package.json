@@ -1,9 +1,9 @@
 {
-  "name": "3d-io",
+  "name": "3d-io-website",
   "version": "1.0.0",
-  "description": "Your swiss knife for interior apps",
+  "description": "toolkit for interior apps",
   "homepage": "http://3d.io",
-  "repository": "archilogic-com/3d-io",
+  "repository": "archilogic-com/3d-io-website",
   "private": true,
   "author": {
     "name": "archilogic",
