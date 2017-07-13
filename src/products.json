@@ -19,7 +19,7 @@
     "category": "experiences",
     "description": null,
     "app": {
-      "url": "https://app-creator-3dio.herokuapp.com/"
+      "url": "http://appcreator.3d.io"
     },
     "api": {
       "name": "appCreator",
