@@ -122,8 +122,8 @@ block content
       .twelve.columns
       table(style='width: 100%;')
         tr
-          td.desc
-            p(style='font-weight:300; vertical-align: middle;') Products:
+          td.desc(style='position:relative;')
+            p(style='font-weight:300; display: block; position: absolute; bottom: 6px;') Products:
           td.free
             p Explore
             p(style='font-weight:300;') A generous dose of 3D
@@ -138,9 +138,14 @@ block content
             p Pay as you go
         tr
           td.desc App Creator<br>3D Editor<br>Furniture Library<br>Scene Library<br>Material Library
-          td.free Included
-          td.pro Included
-          td.bus Included
+          td.free <br><br>Included
+          td.pro <br><br>Included
+          td.bus <br><br>Included
+        tr
+          td.desc Home Staging AI
+          td.free 100
+          td.pro 500
+          td.bus $ 0.20
         tr
           td.desc Floor Plan to 3D conversions
           td.free 10
@@ -178,11 +183,6 @@ block content
           td.pro 30
           td.bus $ 3.00
         tr
-          td.desc Home Staging AI
-          td.free 100
-          td.pro 500
-          td.bus $ 0.20
-        tr
           td.desc 3D Modifications
           td.free 100
           td.pro 500
@@ -192,9 +192,9 @@ block content
           td.free
             a.cta Get API Key
           td.pro
-            a (Coming Soon)
+            .cta-coming-soon Coming Soon
           td.bus
-            a (Coming Soon)
+            .cta-coming-soon Coming Soon
 
   .container#community
     .row

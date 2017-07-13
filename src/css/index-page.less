@@ -4,7 +4,7 @@
 
     @text-color: #777;
 
-    padding: 80px 0 50px 0;
+    padding: 80px 0 150px 0;
     min-height: 80vh;
 
     font-family: "Fira Sans", Helvetica, Arial, sans-serif;
@@ -173,11 +173,9 @@
                     background-position: center;
                 }
                 .experiences {
-                    //background-image: url('../img/icon-product-experience.svg');
                     background-image: url('data:image/svg+xml;utf8,<svg style="fill:#1B2023;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 120"><path d="M103.52,89.332a5.531,5.531,0,0,1-2.644,4.417L54.644,118.533a6.271,6.271,0,0,1-5.288,0L3.124,93.75A5.531,5.531,0,0,1,.48,89.332V30.668A5.531,5.531,0,0,1,3.124,26.25L49.356,1.467a6.271,6.271,0,0,1,5.288,0L100.876,26.25a5.531,5.531,0,0,1,2.644,4.417Z"/></svg>');
                 }
                 .content {
-                    //background-image: url('../img/icon-product-content.svg');
                     background-image: url('data:image/svg+xml;utf8,<svg style="fill:#99B7C6;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 120"><path d="M103.52,89.332a5.531,5.531,0,0,1-2.644,4.417L54.644,118.533a6.271,6.271,0,0,1-5.288,0L3.124,93.75A5.531,5.531,0,0,1,.48,89.332V30.668A5.531,5.531,0,0,1,3.124,26.25L49.356,1.467a6.271,6.271,0,0,1,5.288,0L100.876,26.25a5.531,5.531,0,0,1,2.644,4.417Z"/></svg>');
                 }
             }
@@ -234,25 +232,25 @@
         .desc {
             width: 40%;
             padding-left: 10px;
-            background-color: #f8f8fa;
+            background-color: #ebebeb;
         }
         .free {
             width: 20%;
             background: #ddd;
             text-align: center;
-            background-color: #f3f3f5;
+            background-color: #ebebeb; //#e0e0e0
         }
         .pro {
             width: 20%;
             background: #ddd;
             text-align: center;
-            background-color: #f0f0f2;
+            background-color: #ebebeb; //#d1d1d1
         }
         .bus {
             width: 20%;
             background: #ddd;
             text-align: center;
-            background-color: #f3f3f5;
+            background-color: #ebebeb;
         }
 
         .cta {
@@ -265,8 +263,7 @@
             padding: 0 17px 0 15px;
             background: @pltfrm-blue-50;
             border-radius: 3px;
-            margin: 0 6px 6px 0;
-            text-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0);
+            margin: 6px 0 6px 0;
             white-space: nowrap;
             border-bottom: 2px solid @pltfrm-blue-50;
             &:hover {
@@ -276,6 +273,21 @@
                 border-bottom: 2px solid @pltfrm-blue-60;
             }
         }
+
+        .cta-coming-soon {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            font-weight: 400;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 17px 0 15px;
+            background: @pltfrm-grey-20;
+            border-radius: 3px;
+            margin: 6px 0 6px 0;
+            white-space: nowrap;
+        }
+
     }
 
     #community {
