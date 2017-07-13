@@ -1,4 +1,6 @@
-# Special Pricing for Certified Partners and Platforms
+# Special Pricing
 
-* [Certified Partner Requirements](certified-partner-requirements.md)
-* [Request platform deal](maitlo:sales@archilogic.com)
+We provide special pricing for:
+
+* [Certified partners](partner/requirements.md)
+* [Platforms/ large enterprises](maitlo:sales@archilogic.com)
