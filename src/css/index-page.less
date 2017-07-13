@@ -6,7 +6,6 @@
 
     padding: 80px 0 50px 0;
     min-height: 80vh;
-    background: white;
 
     font-family: "Fira Sans", Helvetica, Arial, sans-serif;
     font-weight: 300;
@@ -48,8 +47,9 @@
         font-weight: 600;
     }
 
-    .title-row {
+    #title-row {
 
+        padding-top: 0px;
         margin-bottom: 20px;
         text-align: center;
         @media (min-width: @screenIpad) {
@@ -85,12 +85,50 @@
             }
         }
 
+        #title-pic {
+            position: relative;
+            margin-top: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            @media (min-width: @screenIpad) {
+                margin-left: 0;
+                margin-right: auto;
+            }
+            width: 100%;
+            max-width: 400px;
+            z-index: -100;
+            // keeps ratio
+            svg {
+                width: 100%
+            }
+            .mask {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                overflow: none;
+                img {
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                }
+                #title-pic-furniture {
+                }
+                #title-pic-arch {
+                }
+                #title-pic-plan {
+                }
+            }
+        }
+
 
     }
 
-    .claims {
+    #claims {
         h2 {
-            margin-bottom: 0px;
+            margin-bottom: 0;
         }
     }
 
@@ -100,7 +138,7 @@
         }
         .example {
             position: relative;
-            margin-bottom: 0px;
+            margin-bottom: 0;
             a {
                 color: @text-color;
                 text-decoration: none;
@@ -196,22 +234,25 @@
         .desc {
             width: 40%;
             padding-left: 10px;
-            background: #ddd;
+            background-color: #f8f8fa;
         }
         .free {
             width: 20%;
             background: #ddd;
             text-align: center;
+            background-color: #f3f3f5;
         }
         .pro {
             width: 20%;
             background: #ddd;
             text-align: center;
+            background-color: #f0f0f2;
         }
         .bus {
             width: 20%;
             background: #ddd;
             text-align: center;
+            background-color: #f3f3f5;
         }
 
         .cta {
