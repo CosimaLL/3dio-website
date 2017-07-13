@@ -29,4 +29,4 @@
 
 ## Apply
 
-[Apply for Certified Partner Program](partner/apply.md)
+[Apply for Certified Partner Program](mailto:partner@archilogic.com)
