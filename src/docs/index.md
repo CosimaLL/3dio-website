@@ -1,5 +1,5 @@
 # API Reference
- 
+
  * App Creator
  * A-Frame Components
  * 3D Editor
@@ -9,8 +9,8 @@
  * 3D Export
  * Matterport Import
  * 3D Asset Storage
- * Furniture Library
- * Scene Library
+ * [Furniture Library](docs/api/furniture-library.html)
+ * [Scene Library](docs/api/scene-library.html)
  * Material Library
  * Lightmap Baking
  * 3D Modifiers
