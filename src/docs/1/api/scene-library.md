@@ -4,7 +4,7 @@ The scene library gives you access to your 3D scenes as well as the public 3D sc
 
 ## List scenes
 
-API-Key: **optional**
+API key: **optional**
 
 Lists all available scenes.
 If a valid API key is supplied, it lists all scenes of your organisation, otherwise it lists all public scenes.
@@ -34,7 +34,7 @@ The following snippet will return the first 40 public scenes:
 
 ## Get single scene
 
-API-Key: **optional**
+API key: **optional**
 
 | Parameter | Required? | Description |
 | --- | --- | --- |

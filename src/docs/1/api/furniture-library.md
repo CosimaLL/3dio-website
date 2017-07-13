@@ -4,7 +4,7 @@ The furniture library API calls give you access to the broad [furniture library]
 
 ## Searching the library
 
-API-Key: **Not required**
+API Key: **not required**
 
 | Parameter | Required? | Description |
 | --- | --- | --- |
@@ -43,7 +43,7 @@ The following snippet lists the first 50 furniture pieces:
 
 ## Get a single furniture piece
 
-API-Key: **Not required**
+API key: **not required**
 
 | Parameter | Required? | Description |
 | --- | --- | --- |
