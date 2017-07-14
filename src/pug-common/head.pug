@@ -13,6 +13,12 @@ meta(name='name', content=title)
 meta(name='image', content=image)
 meta(name='theme-color', content='#ffffff')
 
+//- AVOIDS PAGE BEING CACHED BY BROWSER
+//- TODO: REMOVE THIS ONCE PAGE CONTENT IS MORE STABE (SEE ISSUE #16)
+meta(http-equiv='pragma', content='no-cache')
+meta(http-equiv='expires', content='0')
+//- AVOIDS PAGE BEING CACHED BY BROWSER
+
 //- mobile
 meta(name='viewport', content='width=device-width, initial-scale=1')
 

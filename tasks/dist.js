@@ -13,6 +13,8 @@ const gitCommitSha1 = execSync(`git rev-parse HEAD`).toString('utf8').replace('\
  * configs
  */
 
+// TODO: increase cdn max age to 1 day once content becomes more stable (See issue #16)
+const cdnMaxAge = 60 * 30 // = 30 minutes
 const debug = false
 const AWS = {
   bucket: '3d.io',
@@ -49,7 +51,10 @@ function publishCompressed () {
       gzipOptions: { level: 9 }
     }))
     .pipe(s3(AWS, {
-      headers: { 'Content-Encoding': 'gzip' },
+      headers: {
+        'Content-Encoding': 'gzip',
+        'Cache-Control': 'max-age=' + cdnMaxAge
+      },
       uploadPath: AWS.dir,
       failOnError: true
     }))
@@ -58,6 +63,9 @@ function publishCompressed () {
 function publishUncompressed () {
   return gulp.src(src.publishUncompressed)
     .pipe(s3(AWS, {
+      headers: {
+        'Cache-Control': 'max-age=' + cdnMaxAge
+      },
       uploadPath: AWS.dir,
       failOnError: true
     }))
