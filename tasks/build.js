@@ -1,3 +1,5 @@
+// gulp4 is awesome!! https://github.com/gulpjs/gulp/tree/4.0
+
 const Promise = require('bluebird')
 const path = require('path')
 const execSync = require('child_process').execSync
@@ -33,7 +35,7 @@ const src = {
   ],
   markdown: 'src/**/*.md',
   less: [
-    // the first ** are necessary to marks 'src' as base dir for outpuut paths
+    // the first ** are necessary to mark 'src' as base dir for output paths
     'src/**/css/*.less',
     'src/**/font/**/*.less'
   ],
@@ -178,7 +180,6 @@ function remapLinks (html) {
     } else {
       return tag.replace(
         url,
-        //'https://3d.io/' + (url[0] !== '/' ? url : url.substr(1))
         urlPathRoot + (url[0] === '/' ? url : '/' + url)
       ).replace(
         mdExtensionInUrlRegex,
