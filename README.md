@@ -1,6 +1,6 @@
 # 3d.io Website
 
-[![Build Status](https://travis-ci.org/archilogic-com/3dio-website.svg?token=EqpLsvSSqfB8oaHTPxqV&branch=master)](https://travis-ci.org/archilogic-com/3dio-website)
+[![Build Status](https://travis-ci.org/archilogic-com/3dio-website.svg?branch=master)](https://travis-ci.org/archilogic-com/3dio-website)
 
 http://3d.io
 
