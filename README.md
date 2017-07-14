@@ -22,8 +22,8 @@ Non-native browser file types will get precompiled during build process in order
 * Continuous Integration via travis CI:<br>
   https://travis-ci.com/archilogic-com/3d-io-website
 * Build and distribution scripts:<br>
-  https://github.com/archilogic-com/3d-io-website/blob/1.0/tasks/build.js<br>
-  https://github.com/archilogic-com/3d-io-website/blob/1.0/tasks/dist.js<br>
+  https://github.com/archilogic-com/3d-io-website/blob/master/tasks/build.js<br>
+  https://github.com/archilogic-com/3d-io-website/blob/master/tasks/dist.js<br>
 
 ## Development
 
