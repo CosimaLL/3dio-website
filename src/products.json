@@ -6,11 +6,11 @@
     "category": "experiences",
     "description": null,
     "app": {
-      "url": "https://base-for-aframe.glitch.me/#about"
+      "url": "https://3dio-aframe.glitch.me/"
     },
     "api": {
       "name": "aFrame",
-      "url": "https://github.com/archilogic-com/base-for-aframe",
+      "url": "http://3d.io/docs/1/api/aframe-components.html",
       "methods": {}
     }
   },{
