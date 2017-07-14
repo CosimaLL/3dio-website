@@ -3,7 +3,7 @@
 (Work in progress...)
 
  * App Creator
- * [A-Frame Components](docs/1/api/components.md)
+ * [A-Frame Components](docs/1/api/aframe-components.md)
  * [3D Editor](https://docs.archilogic.com)
  * Home Staging AI
  * Floor Plan to 3D conversion
