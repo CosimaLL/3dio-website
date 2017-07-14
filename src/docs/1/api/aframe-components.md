@@ -1,4 +1,4 @@
-# A-Frame components
+# A-Frame Components
 
 ## What can be done with the components
 
