@@ -16,7 +16,7 @@ const gitCommitSha1 = execSync(`git rev-parse HEAD`).toString('utf8').replace('\
 const debug = false
 const AWS = {
   bucket: '3d.io',
-  dir:    gitBranchName === 'master' ? `` : `branch/${gitBranchName}/`,
+  dir:    gitBranchName === 'master' ? `` : `website-branch/${gitBranchName}/`,
   region: 'eu-west-1',
   key:    process.env.AWS_ACCESS_KEY_ID,
   secret: process.env.AWS_SECRET_ACCESS_KEY
