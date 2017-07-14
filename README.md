@@ -15,14 +15,15 @@ Non-native browser file types will get precompiled during build process in order
 
 ## Deployment
 
-* Every branch gets deployed automaticaly into a custom URL using following pattern:<br>
-  `http://3d.io/branch/${branch-name}/`<br>
+* Every branch gets deployed automaticaly into a custom URL using following pattern:
+  * master: `http://3d.io/`
+  * branches: `http://3d.io/branch/${branch-name}/`
   Build takes ca. 2 minutes.
 * Continuous Integration via travis CI:<br>
   https://travis-ci.com/archilogic-com/3d-io-website
 * Build and distribution scripts:<br>
-  https://github.com/archilogic-com/3d-io-website/blob/1.0/tasks/build.js<br>
-  https://github.com/archilogic-com/3d-io-website/blob/1.0/tasks/dist.js<br>
+  https://github.com/archilogic-com/3d-io-website/blob/master/tasks/build.js<br>
+  https://github.com/archilogic-com/3d-io-website/blob/master/tasks/dist.js<br>
 
 ## Development
 
