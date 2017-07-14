@@ -1,9 +1,8 @@
 # 3d.io Website
 
-[![Build Status](https://travis-ci.com/archilogic-com/3d-io-website.svg?token=EqpLsvSSqfB8oaHTPxqV&branch=1.0)](https://travis-ci.com/archilogic-com/3d-io-website)
+[![Build Status](https://travis-ci.com/archilogic-com/3d-io-website.svg?token=EqpLsvSSqfB8oaHTPxqV&branch=master)](https://travis-ci.com/archilogic-com/3d-io-website)
 
-Official release preview:<br>
-http://3d.io/branch/1.0/
+http://3d.io
 
 ## Editing
 
