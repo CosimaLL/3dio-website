@@ -26,8 +26,8 @@ The `searchQuery` object looks like this with all fields being optional:
 The following snippet lists the first 50 furniture pieces:
 
 ```javascript
-  var DIO = require('3d.io')
-  DIO.furniture.search().then(console.log)
+  var io3d = require('3d.io')
+  io3d.furniture.search().then(console.log)
 ```
 <!--
 ```bash
@@ -54,8 +54,8 @@ API key: **not required**
 The following snippet reads a single product with the ID `abc123`:
 
 ```javascript
-  var DIO = require('3d.io')
-  DIO.furniture.get('abc123').then(console.log)
+  var io3d = require('3d.io')
+  io3d.furniture.get('abc123').then(console.log)
 ```
 <!--
 ```bash
