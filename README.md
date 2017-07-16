@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/archilogic-com/3dio-website.svg?branch=master)](https://travis-ci.org/archilogic-com/3dio-website)
 
-http://3d.io
+https://3d.io
 
 ## Editing
 
@@ -16,9 +16,10 @@ Non-native browser file types will get precompiled during build process in order
 ## Deployment
 
 * Every branch gets deployed automaticaly into a custom URL using following pattern:
-  * master: `http://3d.io/`
-  * branches: `http://3d.io/website-branch/${branch-name}/`
+  * master: `https://3d.io/`
+  * branches: `https://3d.io/branch/${branch-name}/`
   Build takes ca. 2 minutes.
+  *Consider:* website is being served via CDN. Updating a file might take around 10 min to show effect. 
 * Continuous Integration via travis CI:<br>
   https://travis-ci.com/archilogic-com/3dio-website
 * Build and distribution scripts:<br>
