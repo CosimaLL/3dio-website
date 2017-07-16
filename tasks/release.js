@@ -12,7 +12,7 @@ const gitCommitSha1 = execSync(`git rev-parse HEAD`).toString('utf8').replace('\
 // configs
 
 // TODO: increase cdn max age to 1 day once content becomes more stable (See issue #16)
-const cdnMaxAge = 60 * 30 // = 30 minutes
+const cdnMaxAge = 60 * 10 // = 10 minutes
 const debug = false
 const AWS = {
   bucket: '3d.io',
