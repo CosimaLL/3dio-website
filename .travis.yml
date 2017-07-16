@@ -7,4 +7,4 @@ cache:
   directories:
     - "node_modules"
 script:
-  - gulp dist
+  - gulp release
