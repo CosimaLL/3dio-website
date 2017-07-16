@@ -18,17 +18,17 @@ This can easily be done with these components:
   <a-entity 3dio-data3d="key:/3f995099-d624-4c8e-ab6b-1fd5e3799173/170515-0913-4p3ktf/1e588a3b-90ac-4a32-b5b8-ff2fda7f87c4.gz.data3d.buffer" position="0 0 0"></a-entity>
 </a-scene>
 ```
-[Try out the full example here](/examples/simple-scene/index.html)
+[jsFiddle Demo](https://jsfiddle.net/3dio/5wgoq2u7/embedded/result,html/dark/)
 
-## Displaying a scene with `3dio-data3d`
+## Displaying 3d data with `3dio-data3d`
 
 | Parameter | Description |
 | --- | --- |
-| `key` | Specifies a 3d.io [storage key](/docs/1/api/3d-asset-storage) to identify the scene to display |
-| `url` | Specifies a URL of a `.data3d.json` or `.data3d.buffer` file, e.g. `https://example.com/scenes/simple.data3d.buffer` |
+| `key` | Specifies a 3d.io [storage key](/docs/1/api/storage.md) to identify 3d data to display, e.g. `/3f995099-d624-4c8e-ab6b-1fd5e3799173/170515-0913-4p3ktf/1e588a3b-90ac-4a32-b5b8-ff2fda7f87c4.gz.data3d.buffer` |
+| `url` | Specifies a URL of a `.data3d.json` or `.data3d.buffer` file, e.g. `https://storage.3d.io/3f995099-d624-4c8e-ab6b-1fd5e3799173/170515-0913-4p3ktf/1e588a3b-90ac-4a32-b5b8-ff2fda7f87c4.gz.data3d.buffer` |
 
 ## Displaying furniture with `3dio-furniture`
 
 | Parameter | Description |
 | --- | --- |
-| `id` | The `productResourceId` of the desired furniture piece from the [furniture library](/docs/1/api/furniture-library.html) |
+| `id` | The `productResourceId` of the desired furniture piece from the [furniture library](/docs/1/api/furniture-library.md) |
