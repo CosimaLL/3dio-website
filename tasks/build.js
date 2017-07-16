@@ -20,9 +20,7 @@ const gitCommitSha1 = execSync(`git rev-parse HEAD`).toString('utf8').replace('\
 // all other environments are running on root dir
 const urlPathRoot = process.env.TRAVIS_BRANCH && process.env.TRAVIS_BRANCH !== 'master' ? '/branch/'+process.env.TRAVIS_BRANCH : ''
 
-/*
- * configs
- */
+// configs
 
 const debug = true
 const src = {
@@ -30,17 +28,13 @@ const src = {
     'src/**/*.pug',
     '!src/pug-common/**/**'
   ],
-  pugWatch: [
-    'src/**/*.pug',
+  markdown: [
+    'src/**/*.md'
   ],
-  markdown: 'src/**/*.md',
   less: [
     // the first ** are necessary to mark 'src' as base dir for output paths
     'src/**/css/*.less',
     'src/**/font/**/*.less'
-  ],
-  lessWatch: [
-    'src/**/*.less',
   ],
   staticContent: [
     'src/**/**',
@@ -49,16 +43,11 @@ const src = {
     '!src/**/*.pug',
     '!src/**/*.md',
     '!src/**/*.less'
-  ],
-  watch: [
-    'src/**/**'
   ]
 }
 const dest = 'build'
 
-/*
- * bootstrap
- */
+// bootstrap
 
 marked.setOptions({
   renderer: new marked.Renderer(),
@@ -71,9 +60,17 @@ marked.setOptions({
   }
 })
 
-/*
- * tasks
- */
+// tasks
+
+const build = gulp.series(
+  cleanBuildDir,
+  gulp.parallel(
+    copyStaticContent,
+    renderPug,
+    renderMarkdown,
+    renderLess
+  )
+)
 
 function cleanBuildDir () {
   return del([dest])
@@ -159,16 +156,7 @@ function renderLess () {
     .pipe(gulp.dest(dest))
 }
 
-function watch () {
-  gulp.watch(src.pugWatch, renderPug)
-  gulp.watch(src.markdown, renderMarkdown)
-  gulp.watch(src.lessWatch, renderLess)
-  gulp.watch(src.staticContent, copyStaticContent)
-}
-
-/*
- * helpers
- */
+// helpers
 
 const aTagInHtmlRegex = /\<a *[^\/>]*href="([^"]*|\\")*"*[^\/>]*\>/gi
 const mdExtensionInUrlRegex = /(\.md)/gi
@@ -202,19 +190,12 @@ function getGithubEditLink (file) {
   return `https://github.com/archilogic-com/3d-io-website/edit/${gitBranchName}/${relativePath}`
 }
 
-/*
- * export
- */
+// export
 
 module.exports = {
-  watch: watch,
-  build: gulp.series(
-    cleanBuildDir,
-    gulp.parallel(
-      copyStaticContent,
-      renderPug,
-      renderMarkdown,
-      renderLess
-    )
-  )
+  build: build,
+  renderPug: renderPug,
+  renderMarkdown: renderMarkdown,
+  renderLess: renderLess,
+  copyStaticContent: copyStaticContent
 }

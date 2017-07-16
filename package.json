@@ -11,14 +11,15 @@
     "url": "https://archilogic.com"
   },
   "scripts": {
-    "dev": "npm install || true \n killall node || true \n gulp dev & \n node_modules/.bin/lite-server -c tasks/lite-server.config.js",
+    "dev": "npm install || true \n killall node || true \n gulp dev",
     "build": "gulp build",
-    "dist": "gulp dist"
+    "release": "gulp release"
   },
   "dependencies": {
     "bluebird": "^3.5.0"
   },
   "devDependencies": {
+    "chalk": "^2.0.1",
     "del": "^3.0.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-gzip": "^1.4.0",

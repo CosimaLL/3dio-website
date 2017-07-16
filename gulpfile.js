@@ -1,8 +1,7 @@
+// gulp 4 - https://github.com/gulpjs/gulp/tree/4.0
 const gulp = require('gulp')
 
-gulp.task('dev', gulp.series(
-  require('./tasks/build').build,
-  require('./tasks/build').watch
-))
+// register tasks for command line
+gulp.task('dev', require('./tasks/dev'))
 gulp.task('build', require('./tasks/build').build)
-gulp.task('dist', require('./tasks/dist'))
+gulp.task('release', require('./tasks/release'))
