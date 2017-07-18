@@ -23,5 +23,5 @@ Expect changes: APIs are in first public beta release state.
 * Utils
 
 ## Distribution
-* Browser: https://3d.io/releases
+* Browser: https://3d.io/releases/
 * Node: https://www.npmjs.com/package/3dio
