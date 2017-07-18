@@ -79,9 +79,9 @@ block content
       each p in products
         .product
           .left
-            .icon(class=p.category)
+            .icon-container
               if p.icon
-                img(src=p.icon)
+                div(class='icon '+p.icon)
           .right
             h4= p.title
             .badges

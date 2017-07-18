@@ -2,7 +2,7 @@
   "domain": "3d.io",
   "products": [{
     "title": "A-Frame Components",
-    "icon": "",
+    "icon": "icon-a-frame-components",
     "category": "experiences",
     "description": null,
     "app": {
@@ -15,7 +15,7 @@
     }
   },{
     "title": "App Creator",
-    "icon": "",
+    "icon": "icon-app-creator",
     "category": "experiences",
     "description": null,
     "app": {
@@ -28,7 +28,7 @@
     }
   },{
     "title": "3D Editor",
-    "icon": "",
+    "icon": "icon-3d-editor",
     "category": "experiences",
     "description": null,
     "app": {
@@ -41,7 +41,7 @@
     }
   },{
     "title": "Home Staging AI",
-    "icon": "",
+    "icon": "icon-home-staging-ai",
     "category": "experiences",
     "description": null,
     "app": {
@@ -58,7 +58,7 @@
     }
   },{
     "title": "Floor Plan to 3D conversion",
-    "icon": "",
+    "icon": "icon-floor-plan-to-3d-conversion",
     "category": "content",
     "description": null,
     "app": {
@@ -73,7 +73,7 @@
     }
   },{
     "title": "3D Import / Publishing",
-    "icon": "",
+    "icon": "icon-3d-import",
     "category": "content",
     "description": null,
     "app": {
@@ -93,7 +93,7 @@
     }
   },{
     "title": "3D Export",
-    "icon": "",
+    "icon": "icon-3d-export",
     "category": "content",
     "description": null,
     "app": {
@@ -113,7 +113,7 @@
     }
   },{
     "title": "Matterport Import",
-    "icon": "",
+    "icon": "icon-matterport-import",
     "category": "content",
     "description": null,
     "app": {
@@ -128,7 +128,7 @@
     }
   },{
     "title": "3D Asset Storage",
-    "icon": "",
+    "icon": "icon-3d-asset-storage",
     "category": "content",
     "description": null,
     "app": {
@@ -144,7 +144,7 @@
     }
   },{
     "title": "Furniture Library",
-    "icon": "",
+    "icon": "icon-furniture-library",
     "category": "content",
     "description": null,
     "app": {
@@ -160,7 +160,7 @@
     }
   },{
     "title": "Scene Library",
-    "icon": "",
+    "icon": "icon-scene-library",
     "category": "content",
     "description": null,
     "app": {
@@ -176,7 +176,7 @@
     }
   },{
     "title": "Material Library",
-    "icon": "",
+    "icon": "icon-material-library",
     "category": "content",
     "description": null,
     "app": {
@@ -189,7 +189,7 @@
     }
   },{
     "title": "Lightmap Baking",
-    "icon": "",
+    "icon": "icon-lightmap-baking",
     "category": "content",
     "description": null,
     "app": {
@@ -205,7 +205,7 @@
     }
   },{
     "title": "3D Modifiers",
-    "icon": "",
+    "icon": "icon-3d-modifiers",
     "category": "content",
     "description": null,
     "app": {
