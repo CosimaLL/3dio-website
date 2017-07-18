@@ -1,6 +1,6 @@
 # 3d.io API Reference
 
-Expect changes: APIs are in first public beta verions and documentation is work in progress.
+Expect changes: APIs are in first public beta release state.
 
 ## Products APIs
 * App Creator
