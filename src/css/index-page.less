@@ -56,26 +56,47 @@
             text-align: left;
         }
 
-        a {
+        .cta-button {
             display: inline-block;
             text-decoration: none;
             color: white;
             font-weight: 400;
             height: 38px;
             line-height: 40px;
-            padding: 0 17px 0 15px;
-            background: @pltfrm-blue-50;
+            padding: 0 13px 0 13px;
+            background-color: @pltfrm-blue-50;
             border-radius: 3px;
             margin: 0 6px 6px 0;
             text-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0);
-            border-bottom: 2px solid @pltfrm-blue-50;
             box-shadow: 0px 0px 4px 2px white;
+            position: relative;
+            &:hover {
+                top: -1px;
+                left: -1px;
+                box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.2);
+                color: white;
+                background-color: @pltfrm-blue-40;
+            }
+            &:active {
+                top: 1px;
+                left: 1px;
+                background-color: @pltfrm-blue-50;
+                box-shadow: 2px 2px 0px 0px rgba(0,0,0,0);
+            }
         }
-        a:hover {
-            color: white;
-            height: 38px;
-            background: @pltfrm-blue-40;
-            border-bottom: 2px solid @pltfrm-blue-60;
+        .cta-github {
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+            width: 46px;
+            background-image: url('data:image/svg+xml;utf8,<svg style="fill:white;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><title>Artboard 1 copy</title><path d="M46.791,128.865s-.062-18.791-.1-24.788c-19.989,4.338-24.207-9.633-24.207-9.633-3.268-8.3-7.979-10.512-7.979-10.512C7.984,79.474,15,79.565,15,79.565c7.212.508,11.007,7.406,11.007,7.406,6.41,10.982,16.818,7.811,20.914,5.971.653-4.643,2.511-7.811,4.566-9.607-15.965-1.81-32.741-7.974-32.741-35.517a27.776,27.776,0,0,1,7.4-19.283c-.739-1.818-3.205-9.124.7-19.018,0,0,6.034-1.932,19.761,7.367a68.114,68.114,0,0,1,35.981,0c13.719-9.3,19.747-7.367,19.747-7.367,3.921,9.893,1.454,17.2.715,19.018a27.73,27.73,0,0,1,7.38,19.283c0,27.606-16.8,33.681-32.81,35.46C80.2,85.5,82.5,89.882,82.5,96.585c0,9.607-.088,32.279-.088,32.279Z"/></svg>');
+            background-size: auto 34px;
+            margin-right: 0;
+            background-position: 6px 6px;
+            background-repeat: no-repeat;
+            &:hover {
+                fill:rgba(255,255,255,1);
+            }
         }
 
         .spacer {
