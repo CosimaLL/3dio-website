@@ -67,21 +67,21 @@
             background-color: @pltfrm-blue-50;
             border-radius: 3px;
             margin: 0 6px 6px 0;
-            text-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0);
+            text-shadow: -2px 2px 0 0 rgba(0, 0, 0, 0);
             box-shadow: 0px 0px 4px 2px white;
             position: relative;
             &:hover {
+                left: 1px;
                 top: -1px;
-                left: -1px;
-                box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.2);
+                box-shadow: -2px 2px 0px 0px rgba(0,0,0,0.2);
                 color: white;
                 background-color: @pltfrm-blue-40;
             }
             &:active {
+                left: -1px;
                 top: 1px;
-                left: 1px;
                 background-color: @pltfrm-blue-50;
-                box-shadow: 2px 2px 0px 0px rgba(0,0,0,0);
+                box-shadow: -2px 2px 0px 0px rgba(0,0,0,0);
             }
         }
         .cta-github {
