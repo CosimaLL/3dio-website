@@ -2,7 +2,7 @@
 
 Expect changes: APIs are in first public beta release state.
 
-## Products APIs
+## Product APIs
 * App Creator
 * [A-Frame Components](docs/1/api/aframe-components.md)
 * [3D Editor](https://docs.archilogic.com)
