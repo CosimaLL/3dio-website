@@ -8,11 +8,13 @@ const build = require('./build.js')
 
 const gitBranchName = process.env.TRAVIS_BRANCH || execSync(`git rev-parse --abbrev-ref HEAD`).toString('utf8').replace('\n', '')
 const gitCommitSha1 = execSync(`git rev-parse HEAD`).toString('utf8').replace('\n', '')
+const isMaster = gitBranchName === 'master'
 
 // configs
 
 // TODO: increase cdn max age to 1 day once content becomes more stable (See issue #16)
-const cdnMaxAge = 60 * 10 // = 10 minutes
+// branches deployments should always be max-age 0
+const cdnMaxAge = !isMaster ? 0 : 60 * 10 // = 10 minutes
 const debug = false
 const AWS = {
   bucket: '3d.io',
