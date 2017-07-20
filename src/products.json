@@ -57,7 +57,7 @@
       }
     }
   },{
-    "title": "Floor Plan to 3D conversion",
+    "title": "Floor Plan to Basic 3D Model conversion",
     "icon": "icon-floor-plan-to-3d-conversion",
     "category": "content",
     "description": null,
