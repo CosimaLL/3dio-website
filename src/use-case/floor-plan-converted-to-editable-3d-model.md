@@ -5,7 +5,7 @@ Our 2D-to-3D [conversion service](https://spaces.archilogic.com/order) turns pix
 ## Input
 Currently we accept JPGs, PNGs, GIFs, and PDFs. We are working on other formats. Below is an example. Note that:
 - the document contains 4 different plans. The one which is supposed to be turned into a model is highlighted by a red box
-- the scale of the plan is clearly indicated. If there are no clues as to the what the real-world scale of the plan is we use door widths for scaling
+- the scale of the plan is clearly indicated. If there are no clues as to what the real-world scale of the plan is we use door widths for scaling
 
 <a href="https://storage.3d.io/5a4fdff6-a40b-403d-817c-802305866599/2017-07-18_14-14-43_ztJllH/floorplan.jpg">
 <img style="max-width: 300px;" src="https://storage.3d.io/5a4fdff6-a40b-403d-817c-802305866599/2017-07-18_14-14-43_ztJllH/floorplan.jpg">
