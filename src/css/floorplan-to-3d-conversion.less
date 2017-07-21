@@ -1,0 +1,63 @@
+@import "common/configs.less";
+
+.title-rows {
+    text-align: left;
+    @media (min-width: @screenIpad) {
+        text-align: center;
+    }
+}
+.step {
+    text-align: center;
+    display: inline-block;
+    background-color: black;
+    font-weight: 400;
+    font-size: 14px;
+    font-weight: 60px;
+    width: 18px;
+    height: 18px;
+    padding-top: 1px;
+    color: white;
+    border-radius: 50%;
+}
+
+h2 {
+    font-size: 28px !important;
+}
+h2 .step {
+    position: relative;
+    top: -4px;
+    font-size: 16px;
+    padding-top: 2px;
+    width: 22px;
+    height: 22px;
+    line-height: 20px;
+}
+
+.container .cta {
+    display: inline-block;
+    text-decoration: none !important;
+    color: white !important;
+    font-weight: 400;
+    height: 38px;
+    line-height: 40px;
+    padding: 0 13px 0 13px;
+    background-color: @pltfrm-blue-50;
+    border-radius: 3px;
+    margin: 1em 6px 6px 0;
+    text-shadow: -2px 2px 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0px 0px 4px 2px white;
+    position: relative;
+    &:hover {
+        left: 1px;
+        top: -1px;
+        box-shadow: -2px 2px 0px 0px rgba(0,0,0,0.2);
+        color: white;
+        background-color: @pltfrm-blue-40;
+    }
+    &:active {
+        left: -1px;
+        top: 1px;
+        background-color: @pltfrm-blue-50;
+        box-shadow: -2px 2px 0px 0px rgba(0,0,0,0);
+    }
+}
