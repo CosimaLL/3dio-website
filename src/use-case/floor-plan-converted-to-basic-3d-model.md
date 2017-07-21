@@ -1,4 +1,4 @@
-# Floor Plan Converted to Editable 3D Model
+# Floor Plan Converted to Basic 3D Model
 
 Our 2D-to-3D [conversion service](https://spaces.archilogic.com/order) turns pixel-based floor plans into beautiful interactive 3D models that are ready to work with our other [APIs](/#products). 
 
