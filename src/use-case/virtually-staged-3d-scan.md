@@ -15,20 +15,20 @@ Here's a fully furnished Matterport OBJ. We're explaining the import process bel
 
 #### Then go to your <a href="https://spaces.archilogic.com/dashboard">dashboard</a> and click on "Add new model" -> "Build your own or Upload 3D Models"
 
-<a href="https://dnvf9esa6v418.cloudfront.net/535e624259ee6b0200000484/2017-07-19_08-16-55_e1H4XN/Screen_Shot_2017-07-19_at_09.48.24.png">
-<img src="https://dnvf9esa6v418.cloudfront.net/535e624259ee6b0200000484/2017-07-19_08-16-55_e1H4XN/Screen_Shot_2017-07-19_at_09.48.24.png">
+<a href="https://storage.3d.io/535e624259ee6b0200000484/2017-07-19_08-16-55_e1H4XN/Screen_Shot_2017-07-19_at_09.48.24.png">
+<img src="https://storage.3d.io/535e624259ee6b0200000484/2017-07-19_08-16-55_e1H4XN/Screen_Shot_2017-07-19_at_09.48.24.png">
 </a>
 
 #### Drag-and-drop your entire Matterport export (.obj, .mtl, .jpgs) into the empty canvas.
 
-<a href="https://dnvf9esa6v418.cloudfront.net/535e624259ee6b0200000484/2017-07-19_08-24-49_XMRiax/Screen_Shot_2017-07-19_at_10.02.20.png">
-<img src="https://dnvf9esa6v418.cloudfront.net/535e624259ee6b0200000484/2017-07-19_08-24-49_XMRiax/Screen_Shot_2017-07-19_at_10.02.20.png">
+<a href="https://storage.3d.io/535e624259ee6b0200000484/2017-07-19_08-24-49_XMRiax/Screen_Shot_2017-07-19_at_10.02.20.png">
+<img src="https://storage.3d.io/535e624259ee6b0200000484/2017-07-19_08-24-49_XMRiax/Screen_Shot_2017-07-19_at_10.02.20.png">
 </a>
 
 #### Once the import is complete you will likely have to flip the XZ coordinates. To do that check the box on the menu that appears when you select the importet 3d object.
 
-<a href="https://dnvf9esa6v418.cloudfront.net/535e624259ee6b0200000484/2017-07-19_08-27-28_HxYU6p/Screen_Shot_2017-07-19_at_10.09.59.png">
-<img src="https://dnvf9esa6v418.cloudfront.net/535e624259ee6b0200000484/2017-07-19_08-27-28_HxYU6p/Screen_Shot_2017-07-19_at_10.09.59.png">
+<a href="https://storage.3d.io/535e624259ee6b0200000484/2017-07-19_08-27-28_HxYU6p/Screen_Shot_2017-07-19_at_10.09.59.png">
+<img src="https://storage.3d.io/535e624259ee6b0200000484/2017-07-19_08-27-28_HxYU6p/Screen_Shot_2017-07-19_at_10.09.59.png">
 </a>
 
 #### Now, just drag-and-drop furniture into your model.
