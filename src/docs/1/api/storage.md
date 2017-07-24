@@ -54,7 +54,7 @@ Upload single file:
 var file = new Blob(['Hello World'], { type: 'text/plain' })
 
 IO3d.storage.put(file).then(function(key){
-  console.log('Your file has been stored ')
+  console.log('Your new file key is:', key)
 })
 ```
 
