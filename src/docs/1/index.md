@@ -19,7 +19,7 @@ Expect changes: APIs are in first public beta release state.
 * Modifiers
 
 ## Complementary APIs
-* User
+* Authentication
 * Utils
 
 ## Distribution
