@@ -1,6 +1,10 @@
-# Floor Plan Converted to Basic 3D Model
+# Basic 3D Model from Floor Plan
 
-Our 2D-to-3D [conversion service](https://spaces.archilogic.com/order) turns pixel-based floor plans into beautiful interactive 3D models that are ready to work with our other [APIs](/#products). 
+3d.io converts 2D floor plans into beatiful interactive 3D models with ease. We offer two quality standards:
+* **Basic 3D Model** provided by 3d.io 
+* **Professional 3D Model** provided by [certified partners](/floor-plan-to-3d-conversion.md)
+
+This page explains the process of creating a basic 3D model which is fully editable and can be upgraded to a [professional 3d model](/floor-plan-to-3d-conversion.md) later.
 
 ## Input
 Currently we accept JPGs, PNGs, GIFs, and PDFs. We are working on other formats. Below is an example. Note that:
