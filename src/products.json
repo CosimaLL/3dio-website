@@ -136,7 +136,7 @@
     },
     "api": {
       "name": "storage",
-      "url": null,
+      "url": "https://3d.io/docs/1/api/storage.html",
       "methods": {
         "put": { "requiresKey": "optional" },
         "get": { "requiresKey": false }
