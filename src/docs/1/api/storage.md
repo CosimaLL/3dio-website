@@ -60,7 +60,18 @@ IO3d.storage.put(file).then(function(key){
 
 Upload single file to a specific location:
 ```javascript
-// COMING SOON
+var file = new Blob(['Hello World'], { type: 'text/plain' })
+
+IO3d.auth.login({
+  username: 'your-username-here',
+  username: 'your-password-here'
+}).then(function(session){
+  IO3d.storage.put(file,{
+    key: '/' + session.user.id + '/my-folder-name/my-file-name.txt'
+  })
+}).then(function(key){
+  console.log('Done')
+})
 ```
 
 Upload single file to a specific location shortcut:
