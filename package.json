@@ -1,24 +1,23 @@
 {
-  "name": "3d-io-website",
-  "version": "1.0.0-beta.1",
+  "name": "3dio-website",
   "description": "toolkit for interior apps",
   "homepage": "http://3d.io",
-  "repository": "archilogic-com/3d-io-website",
-  "private": true,
+  "repository": "archilogic-com/3dio-website",
   "author": {
     "name": "archilogic",
     "email": "dev.rocks@archilogic.com",
     "url": "https://archilogic.com"
   },
+  "private": true,
   "scripts": {
     "dev": "npm install || true \n killall node || true \n gulp dev",
     "build": "gulp build",
     "release": "gulp release"
   },
   "dependencies": {
-    "bluebird": "^3.5.0"
   },
   "devDependencies": {
+    "bluebird": "^3.5.0",
     "chalk": "^2.0.1",
     "del": "^3.0.0",
     "gulp": "github:gulpjs/gulp#4.0",
