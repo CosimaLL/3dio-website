@@ -31,19 +31,34 @@ https://storage-nocdn.3d.io/535e624259ee6b0200000484/example/floorplan.jpg
 
 ## Uploading Files 
 
-### Upload single file:
+### Upload a single file:
 ```javascript
-var file = new Blob(['Hello World'], { type: 'text/plain' })
+var file = new Blob(['Hello World'])
+file.name = 'hello.txt'
 
 IO3d.storage.put(file).then(function(key){
   console.log('Your new file key is:', key)
 })
 ```
 
-### Upload single file to a specific location:
+### Upload multiple files:
 ```javascript
-var file = new Blob(['Hello World'], { type: 'text/plain' })
+var file1 = new Blob(['Hello World!!'])
+file1.name = 'my-filename.txt'
 
+var file2 = new Blob(['Howdy Partner'])
+file2.name = 'another-filename.txt'
+
+IO3d.storage.put([ file1, file2 ]).then(function(keys){
+  console.log('Done. File keys are:', keys)
+})
+```
+
+### Upload file to a specific location:
+```javascript
+var file = new Blob(['Hello World'])
+
+// uploading a file to specific location requires login 
 IO3d.auth.login({
   username: 'your-username-here',
   username: 'your-password-here'
@@ -56,32 +71,35 @@ IO3d.auth.login({
 })
 ```
 
-### Upload single file to a specific location shortcut:
+### Upload file to a specific location using template shortcut:
 ```javascript
-var file = new Blob(['Hello World'], { type: 'text/plain' })
+var file = new Blob(['Hello World'])
 
 IO3d.storage.put(file,{
-  // {{userId}} will get replaced internally by
-  // the currently logged in user id.
+  // {{userId}} will get replaced internally by the currently logged in
+  // user id. Not being logged in will result in promise being rejected.
   key: '/{{userId}}/my-folder-name/my-file-name.txt'
-}).then(function(key){
+}).then(function onSuccess(key){
   console.log('Done')
+}, function onReject() {
+  console.error('Please log in first')
 })
 ```
-
 ### Upload multiple files to a specific directory:
 ```javascript
-// use file name property: 
-var files = [
-  new Blob(['Hello World!!'], { type: 'text/plain' }),
-  new Blob(['Howdy Partner'], { type: 'text/plain' })
-]
+var file1 = new Blob(['Hello World!!'])
+file1.name = 'my-filename.txt'
+
+var file2 = new Blob(['Howdy Partner'])
+file2.name = 'another-filename.txt'
 
 IO3d.storage.put(files,{
-  // {{userId}} will get replaced internally by
-  // the currently logged in user id.
+  // {{userId}} will get replaced internally by the currently logged in
+  // user id. Not being logged in will result in promise being rejected.
   dir: '/{{userId}}/my-folder-name/'
-}).then(function(keys){
+}).then(function onSuccess(keys){
   console.log('Done. File keys are:', keys)
+}, function onReject() {
+  console.error('Please log in first')
 })
 ```
