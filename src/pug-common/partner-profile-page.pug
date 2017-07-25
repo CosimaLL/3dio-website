@@ -2,11 +2,27 @@ extends main.pug
 
 
 block head
+  link(href=urlPathRoot+'/css/md-wrapper.css', rel='stylesheet')
   link(href=urlPathRoot+'/css/partner-profile-page.css', rel='stylesheet')
 
 block content
   .container#title
     .row
       .twelve.columns
+        p Certifier Partner of 3d.io
+        .logo-container
+          .bg
+          .logo(style=`background-image: url('${partner.LOGO}');`)
+
         h1=partner.NAME
+        .tagline=partner.TAGLINE
+        .description=partner.DESCRIPTION
+        img(src=partner.IMAGE)
+      .twelve.columns
+        h2 Example Projects
+        if partner.EXAMPLES
+          each example in partner.EXAMPLES
+            a(href=example.URL)
+              img(src=example.IMAGE)
+              h3(href=example.TITLE)
       .twelve.columns !{content}

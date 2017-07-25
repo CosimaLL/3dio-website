@@ -4,7 +4,7 @@
 
     @text-color: #777;
 
-    padding: 80px 0 150px 0;
+    padding: 60px 0 150px 0;
     min-height: 80vh;
 
     font-family: "Fira Sans", Helvetica, Arial, sans-serif;
@@ -15,23 +15,23 @@
 
     text-align: center;
 
-    #partner-list {
+    @import "partner.less";
 
-        margin-top: 50px;
-        margin-bottom: 50px;
+    .logo-container {
+        margin-top: 40px;
+    }
 
-        .partner {
-            margin: 0 0 30px 0;
-            h2 {
+    h1 {
+        margin-top: 10px;
+    }
 
-            }
+    .tagline {
+        font-weight: bold;
+    }
 
-            img {
-                margin-top: 15px;
-                width: 50%;
-            }
-        }
-
+    .description {
+        margin: 20px auto 20px auto;
+        max-width: 600px;
     }
 
 }

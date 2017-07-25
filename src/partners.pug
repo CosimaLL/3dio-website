@@ -24,13 +24,15 @@ block content
       }
 
     //- Mixin (html template for partner list)
-    mixin partner(p)
+    mixin partner(partner)
       .four.columns
         .partner
-          a(href=urlPathRoot+'/partner/'+p.filename)
-            //-p= p.TAGLINE
-            img(src=p.LOGO)
-            h2= p.NAME
+          a(href=urlPathRoot+'/partner/'+partner.filename)
+            //-p= partner.TAGLINE
+            .logo-container
+              .bg
+              .logo(style=`background-image: url('${partner.LOGO}');`)
+            h2= partner.NAME
 
     each p in partnerRows
       .row
