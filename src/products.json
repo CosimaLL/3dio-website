@@ -10,7 +10,7 @@
     },
     "api": {
       "name": "aFrame",
-      "url": "http://3d.io/docs/1/api/aframe-components.html",
+      "url": "http://3d.io/docs/api/1/aframe-components.html",
       "methods": {}
     }
   },{
@@ -135,7 +135,7 @@
     },
     "api": {
       "name": "storage",
-      "url": "https://3d.io/docs/1/api/storage.html",
+      "url": "https://3d.io/docs/api/1/storage.html",
       "methods": {
         "put": { "requiresKey": "optional" },
         "get": { "requiresKey": false }

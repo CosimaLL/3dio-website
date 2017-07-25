@@ -3,8 +3,8 @@
 ## What can be done with the components
 
 If you are building a 3D web application with the [A-Frame](https://aframe.io) library
-you may find it conveniet to **display 3D scenes** from your own or our public [Scene library](/docs/1/api/scene-library.html)
-or **display furniture** from our [Furniture library](/docs/1/api/furniture-library.html).
+you may find it conveniet to **display 3D scenes** from your own or our public [Scene library](/docs/api/1/scene-library.html)
+or **display furniture** from our [Furniture library](/docs/api/1/furniture-library.html).
 
 This can easily be done with these components:
 
@@ -24,11 +24,11 @@ This can easily be done with these components:
 
 | Parameter | Description |
 | --- | --- |
-| `key` | Specifies a 3d.io [storage key](/docs/1/api/storage.md) to identify 3d data to display, e.g. `/3f995099-d624-4c8e-ab6b-1fd5e3799173/170515-0913-4p3ktf/1e588a3b-90ac-4a32-b5b8-ff2fda7f87c4.gz.data3d.buffer` |
+| `key` | Specifies a 3d.io [storage key](/docs/api/1/storage.md) to identify 3d data to display, e.g. `/3f995099-d624-4c8e-ab6b-1fd5e3799173/170515-0913-4p3ktf/1e588a3b-90ac-4a32-b5b8-ff2fda7f87c4.gz.data3d.buffer` |
 | `url` | Specifies a URL of a `.data3d.json` or `.data3d.buffer` file, e.g. `https://storage.3d.io/3f995099-d624-4c8e-ab6b-1fd5e3799173/170515-0913-4p3ktf/1e588a3b-90ac-4a32-b5b8-ff2fda7f87c4.gz.data3d.buffer` |
 
 ## Displaying furniture with `io3d-furniture`
 
 | Parameter | Description |
 | --- | --- |
-| `id` | The `productResourceId` of the desired furniture piece from the [furniture library](/docs/1/api/furniture-library.md) |
+| `id` | The `productResourceId` of the desired furniture piece from the [furniture library](/docs/api/1/furniture-library.md) |
