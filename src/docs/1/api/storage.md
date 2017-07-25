@@ -6,13 +6,13 @@ Large-scale file storage service designed for 3D assets. It enables you to uploa
 
 Every file has its own unique file key consisting of the user UUID and a custom path:
 ```text
-/ed245e57-7906-4995-8ac2-e742ce107092/170207-1525-1bqjks/floorplan.jpg
-|                                    |                  |            |
-| ------------- userId ------------- |                  |            |
-|                                                       |            |
-| ----------------------- dir ------------------------- |            |
-|                                                                    |
-| ------------------------------ key ------------------------------- |
+/535e624259ee6b0200000484/example/floorplan.jpg
+|                        |       |            |
+| ------- userId ------- |       |            |
+|                                |            |
+| ------------ dir ------------- |            |
+|                                             |
+| ------------------- key ------------------- |
 ```
 
 ## Accessing Files
@@ -25,18 +25,20 @@ Every file has its own URL: Simply append the key to: `https://storage.3d.io`
 
 Example:
 ```text
-https://storage.3d.io/ed245e57-7906-4995-8ac2-e742ce107092/170207-1525-1bqjks/floorplan.jpg
-|                    |                                                                    |
-| ----- domain ----- | ------------------------------ key ------------------------------- |
-|                                                                                         |
-| ---------------------------------------- url ------------------------------------------ |
+https://storage.3d.io/535e624259ee6b0200000484/example/floorplan.jpg
+|                    |                                             |
+| ----- domain ----- | ------------------- key ------------------- |
+|                                                                  |
+| ----------------------------- url ------------------------------ |
 ```
 
 ## No CDN Cache URL
 
+Access file directly without CDN caching.
+
 Example:
 ```text
-https://storage-nocdn.3d.io/ed245e57-7906-4995-8ac2-e742ce107092/170207-1525-1bqjks/floorplan.jpg
+https://storage-nocdn.3d.io/535e624259ee6b0200000484/example/floorplan.jpg
 ```
 
 ## io3d.js
