@@ -22,7 +22,7 @@ const urlPathRoot = process.env.TRAVIS_BRANCH && process.env.TRAVIS_BRANCH !== '
 
 // configs
 
-const debug = true
+const debug = false
 const src = {
   pug: [
     'src/**/*.pug',
@@ -97,6 +97,8 @@ function renderPug () {
       urlPathRoot: urlPathRoot,
       githubLink: getGithubEditLink(inputFile)
     })
+    // pug renderer wraps code tags into pre tegs. we dont want that
+    html = html.replace(/<pre>[\n\s]*<code/gmi, '<code').replace(/<\/code>[\n\s]*<\/pre>/gmi, '</code>')
     // remap relative links and markdown links
     html = remapLinks(html)
     // create vinyl object for output
@@ -133,6 +135,8 @@ function renderMarkdown () {
         urlPathRoot: urlPathRoot,
         githubLink: getGithubEditLink(inputFile)
       })
+      // pug renderer wraps code tags into pre tegs. we dont want that
+      html = html.replace(/<pre>[\n\s]*<code/gmi, '<code').replace(/<\/code>[\n\s]*<\/pre>/gmi, '</code>')
       // remap relative links and markdown links
       html = remapLinks(html)
       // create vinyl object for output
