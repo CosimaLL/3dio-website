@@ -61,7 +61,7 @@
     "category": "content",
     "description": null,
     "app": {
-      "url": "https://spaces.archilogic.com/order"
+      "url": "https://spaces.archilogic.com/explore?popup=order"
     },
     "api": {
       "name": "floorPlanTo3d",
