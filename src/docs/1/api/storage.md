@@ -6,7 +6,7 @@ Large-scale file storage service designed to handle 3D assets. It enables you to
 
 ### File Key
 
-Every file has its own unique file key consisting of an user ID and a custom component:
+Every file has its own unique file key consisting of the user ID and a custom component:
 ```text
 /535e624259ee6b0200000484/example/floorplan.jpg
 |                        |       |            |
@@ -36,7 +36,7 @@ https://storage-nocdn.3d.io/535e624259ee6b0200000484/example/floorplan.jpg
 var file = new Blob(['Hello World'])
 file.name = 'hello.txt'
 
-IO3d.storage.put(file).then(function(key){
+IO3D.storage.put(file).then(function(key){
   console.log('Your new file key is:', key)
 })
 ```
@@ -49,7 +49,7 @@ file1.name = 'my-filename.txt'
 var file2 = new Blob(['Howdy Partner'])
 file2.name = 'another-filename.txt'
 
-IO3d.storage.put([ file1, file2 ]).then(function(keys){
+IO3D.storage.put([ file1, file2 ]).then(function(keys){
   console.log('Done. File keys are:', keys)
 })
 ```
@@ -59,11 +59,11 @@ IO3d.storage.put([ file1, file2 ]).then(function(keys){
 var file = new Blob(['Hello World'])
 
 // uploading a file to specific location requires login 
-IO3d.auth.login({
+IO3D.auth.login({
   username: 'your-username-here',
   username: 'your-password-here'
 }).then(function(session){
-  return IO3d.storage.put(file,{
+  return IO3D.storage.put(file,{
     key: '/' + session.user.id + '/my-folder-name/my-file-name.txt'
   })
 }).then(function(key){
@@ -75,7 +75,7 @@ IO3d.auth.login({
 ```javascript
 var file = new Blob(['Hello World'])
 
-IO3d.storage.put(file,{
+IO3D.storage.put(file,{
   // {{userId}} will get replaced internally by the currently logged in
   // user id. Not being logged in will result in promise being rejected.
   key: '/{{userId}}/my-folder-name/my-file-name.txt'
@@ -93,7 +93,7 @@ file1.name = 'my-filename.txt'
 var file2 = new Blob(['Howdy Partner'])
 file2.name = 'another-filename.txt'
 
-IO3d.storage.put(files,{
+IO3D.storage.put(files,{
   // {{userId}} will get replaced internally by the currently logged in
   // user id. Not being logged in will result in promise being rejected.
   dir: '/{{userId}}/my-folder-name/'
