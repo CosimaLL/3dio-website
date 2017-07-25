@@ -2,6 +2,7 @@
 
 const Promise = require('bluebird')
 const path = require('path')
+const fs = require('fs')
 const execSync = require('child_process').execSync
 // gulp related
 const gulp = require('gulp')
@@ -12,6 +13,7 @@ const Vinyl = require('vinyl')
 const pug = require('pug')
 const less = require('gulp-less')
 const marked = require('marked')
+const yaml = require('js-yaml')
 const pygmentize = require('pygmentize-bundled')
 
 const gitBranchName = process.env.TRAVIS_BRANCH || execSync(`git rev-parse --abbrev-ref HEAD`).toString('utf8').replace('\n', '')
@@ -29,7 +31,15 @@ const src = {
     '!src/pug-common/**/**'
   ],
   markdown: [
-    'src/**/*.md'
+    // the first ** are necessary to mark 'src' as base dir for output paths
+    'src/**/*.md',
+    '!src/**/partner/*.md',
+    'src/**/partner/apply.md'
+  ],
+  partnerProfiles: [
+    // the first ** are necessary to mark 'src' as base dir for output paths
+    'src/**/partner/*.md',
+    '!src/**/partner/apply.md'
   ],
   less: [
     // the first ** are necessary to mark 'src' as base dir for output paths
@@ -65,6 +75,7 @@ marked.setOptions({
 const build = gulp.series(
   cleanBuildDir,
   gulp.parallel(
+    generatePartnerProfilePages,
     copyStaticContent,
     renderPug,
     renderMarkdown,
@@ -91,9 +102,10 @@ function renderPug () {
       // pug options
       filename: inputFile.path,
       pretty: debug,
-      // pass require function so that we can use it inside templates to load json files
+      // generic template helper functions
       require: require,
-      // template variables
+      getAllPartnerInfo: getAllPartnerInfo,
+      // generic template variables
       urlPathRoot: urlPathRoot,
       githubLink: getGithubEditLink(inputFile)
     })
@@ -112,6 +124,50 @@ function renderPug () {
   })).pipe(gulp.dest(dest))
 }
 
+function generatePartnerProfilePages () {
+  return gulp.src(src.partnerProfiles).pipe(through2.obj((inputFile, enc, cb) => {
+    // process files only
+    if (!inputFile.isBuffer()) return
+    // decode text from vinyl object
+    let markdownText = inputFile.contents.toString(enc)
+    const urlPath = urlPathRoot+'/'+inputFile.path.substr(inputFile.base.length)
+    const urlPathDir = path.dirname(urlPath)+'/'
+    const partnerProfileTemplate = path.resolve(process.cwd(), 'src/pug-common/partner-profile-page.pug')
+    getAllPartnerInfo()
+    // get partner info
+    const partner = parsePartnerInfo(markdownText, inputFile.path)
+    // remove partner-info tag from markdown
+    markdownText = removePartnerInfo(markdownText)
+    // convert markdown to html
+    marked(markdownText, (err, content) => {
+      if (err) return cb(err)
+      // render pug to html
+      html = pug.renderFile(partnerProfileTemplate, {
+        // pug options
+        filename: partnerProfileTemplate,
+        cache: true,
+        pretty: debug,
+        // content
+        partner: partner,
+        content: content,
+        // generic template variable
+        urlPathRoot: urlPathRoot,
+        githubLink: getGithubEditLink(inputFile)
+      })
+      // remap relative links and markdown links
+      html = remapLinks(html)
+      // create vinyl object for output
+      const outputFile = new Vinyl({
+        cwd: inputFile.cwd, base: inputFile.base,
+        path: inputFile.path.replace('.md', '.html'),
+        contents: new Buffer(html)
+      })
+      // return
+      cb(null, outputFile)
+    })
+  })).pipe(gulp.dest(dest))
+}
+
 function renderMarkdown () {
   return gulp.src(src.markdown).pipe(through2.obj((inputFile, enc, cb) => {
     // process files only
@@ -124,7 +180,7 @@ function renderMarkdown () {
     marked(markdownText, (err, content) => {
       if (err) return cb(err)
       // render pug to html
-      var pugMarkdownWrapper = path.resolve(process.cwd(), 'src/pug-common/md-wrapper.pug')
+      const pugMarkdownWrapper = path.resolve(process.cwd(), 'src/pug-common/md-wrapper.pug')
       html = pug.renderFile(pugMarkdownWrapper, {
         // pug options
         filename: pugMarkdownWrapper,
@@ -132,6 +188,7 @@ function renderMarkdown () {
         pretty: debug,
         // template variables
         content: content,
+        // generic template variable
         urlPathRoot: urlPathRoot,
         githubLink: getGithubEditLink(inputFile)
       })
@@ -192,6 +249,37 @@ function markdownToHtml (md) {
 function getGithubEditLink (file) {
   var relativePath = 'src/'+file.path.substr(file.base.length)
   return `https://github.com/archilogic-com/3d-io-website/edit/${gitBranchName}/${relativePath}`
+}
+
+function getAllPartnerInfo () {
+  const dir = process.cwd() + '/src/partner'
+  const files = fs.readdirSync(dir)
+  const partners = []
+  files.forEach(function (file) {
+    if (file === 'apply.md') return
+    const info = parsePartnerInfo(fs.readFileSync(dir+'/'+file))
+    info.filename = file
+    partners.push(info)
+  })
+  return partners
+}
+
+const partnerInfoTagRegex = `<script id="partner-info" type="application/x-yaml">\\n([\\s\\S]*)\\n</script>`
+
+function parsePartnerInfo (str, path) {
+  const infoSearch = new RegExp(partnerInfoTagRegex).exec(str)
+  if (!infoSearch) throw `Partner page ${path} has malformed or missing <script id="partner-info" type="application/x-yaml">...</script> tag`
+  let info
+  try {
+    info = yaml.safeLoad(infoSearch[1])
+  } catch (e) {
+    throw `Sorry, "partner-info" can not be parsed and is probably malformed. Read YAML specs: http://yaml.org/spec/`
+  }
+  return info
+}
+
+function removePartnerInfo (str) {
+  return str.replace(new RegExp(partnerInfoTagRegex), '')
 }
 
 // export

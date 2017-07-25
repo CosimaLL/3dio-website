@@ -1,0 +1,12 @@
+extends main.pug
+
+
+block head
+  link(href=urlPathRoot+'/css/partner-profile-page.css', rel='stylesheet')
+
+block content
+  .container#title
+    .row
+      .twelve.columns
+        h1=partner.NAME
+      .twelve.columns !{content}

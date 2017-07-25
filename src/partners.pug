@@ -1,0 +1,42 @@
+extends pug-common/main.pug
+
+
+block head
+  link(href=urlPathRoot+'/css/partners-page.css', rel='stylesheet')
+
+block content
+  .container#title
+    .row
+      .twelve.columns
+        h1 Certified Partners
+
+  .container#filter
+    .row
+      .twelve.columns
+
+  .container#partner-list
+    //- Read partners json and extract data for use in template
+    -
+      var partners = getAllPartnerInfo()
+      var partnerRows = []
+      for (var i=0, l=partners.length; i<l; i+=3) {
+        partnerRows.push([ partners[i], partners[i+1], partners[i+2] ])
+      }
+
+    //- Mixin (html template for partner list)
+    mixin partner(p)
+      .four.columns
+        .partner
+          a(href=urlPathRoot+'/partner/'+p.filename)
+            //-p= p.TAGLINE
+            img(src=p.LOGO)
+            h2= p.NAME
+
+    each p in partnerRows
+      .row
+        if p[0]
+          +partner(p[0])
+        if p[1]
+          +partner(p[1])
+        if p[2]
+          +partner(p[2])
