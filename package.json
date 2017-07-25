@@ -14,8 +14,7 @@
     "build": "gulp build",
     "release": "gulp release"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "bluebird": "^3.5.0",
     "chalk": "^2.0.1",
@@ -24,6 +23,7 @@
     "gulp-gzip": "^1.4.0",
     "gulp-less": "^3.3.2",
     "gulp-s3": "^0.11.0",
+    "js-yaml": "^3.9.0",
     "lite-server": "^2.3.0",
     "marked": "^0.3.6",
     "pug": "^2.0.0-rc.2",
