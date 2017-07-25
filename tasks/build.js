@@ -264,7 +264,7 @@ function getAllPartnerInfo () {
   return partners
 }
 
-const partnerInfoTagRegex = `<script id="partner-info" type="application/x-yaml">\\n([\\s\\S]*)\\n</script>`
+const partnerInfoTagRegex = `<script id="partner-info" type="application/x-yaml">([\\n\\s\\S]*)</script>`
 
 function parsePartnerInfo (str, path) {
   const infoSearch = new RegExp(partnerInfoTagRegex).exec(str)
