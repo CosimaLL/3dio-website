@@ -257,7 +257,7 @@ function getAllPartnerInfo () {
   const partners = []
   files.forEach(function (file) {
     if (file === 'apply.md') return
-    const info = parsePartnerInfo(fs.readFileSync(dir+'/'+file))
+    const info = parsePartnerInfo(fs.readFileSync(dir+'/'+file), file)
     info.filename = file
     partners.push(info)
   })
