@@ -275,6 +275,8 @@ function parsePartnerInfo (str, path) {
   } catch (e) {
     throw `Sorry, "partner-info" can not be parsed and is probably malformed. Read YAML specs: http://yaml.org/spec/`
   }
+  // placeholders
+  if (!info.LOGO) info.LOGO = 'https://archilogic-com.github.io/ui-style-guide/certified-partner/archilogic-partner-badge-pyramid-gradient.svg'
   return info
 }
 
