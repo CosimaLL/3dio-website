@@ -2,7 +2,7 @@
 
 Large-scale file storage service designed to handle 3D assets. It enables you to upload even large files easily and delivers them to your apps over fast and reliable CDN.
 
-## Access Files
+## File Access
 
 ### Storage Key
 
@@ -29,7 +29,7 @@ Access file directly without CDN caching via `storage-nocdn.3d.io` :
 
 https://storage-nocdn.3d.io/535e624259ee6b0200000484/example/floorplan.jpg
 
-## Upload Files 
+## File Upload
 
 ### Upload a single file:
 ```javascript
