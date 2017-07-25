@@ -23,7 +23,6 @@
     },
     "api": {
       "name": "appCreator",
-      "url": "https://github.com/archilogic-com/app-creator",
       "methods": {}
     }
   },{
@@ -148,7 +147,7 @@
     "category": "content",
     "description": null,
     "app": {
-      "url": "https://spaces.archilogic.com/products"
+      "url": null
     },
     "api": {
       "name": "furniture",
