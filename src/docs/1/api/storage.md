@@ -1,6 +1,6 @@
 # Storage
 
-Large-scale file storage service designed for 3D assets. It enables you to upload files easily and delivers them to your apps over a fast and reliable CDN.
+Large-scale file storage service designed to handle 3D assets. It enables you to upload even large files easily and delivers them to your apps over fast and reliable CDN.
 
 ## Access
 
