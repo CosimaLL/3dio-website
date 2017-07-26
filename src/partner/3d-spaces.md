@@ -18,7 +18,7 @@ Project for 5 level, 27 unit off-the-plan residential development in Kedron, Bri
 
 <!--Picture-->
 <a href="https://storage.3d.io/5a4fdff6-a40b-403d-817c-802305866599/2017-07-26_09-43-03_xvnkYO/Screen_Shot_2017-07-26_at_11.34.54.png">
-<img style="max-width: 300px;" src="https://storage.3d.io/5a4fdff6-a40b-403d-817c-802305866599/2017-07-26_09-43-03_xvnkYO/Screen_Shot_2017-07-26_at_11.34.54.png">
+<img style="max-width: 400px;" src="https://storage.3d.io/5a4fdff6-a40b-403d-817c-802305866599/2017-07-26_09-43-03_xvnkYO/Screen_Shot_2017-07-26_at_11.34.54.png">
 </a>
 
 <!--Link-->
@@ -31,7 +31,7 @@ This project included rich media like interactive floor plans, photography, vide
 
 <!--Picture-->
 <a href="https://storage.3d.io/5a4fdff6-a40b-403d-817c-802305866599/2017-07-26_12-32-12_8SJ7dY/Screen_Shot_2017-07-26_at_14.27.21.png">
-<img style="max-width: 300px;" src="https://storage.3d.io/5a4fdff6-a40b-403d-817c-802305866599/2017-07-26_12-32-12_8SJ7dY/Screen_Shot_2017-07-26_at_14.27.21.png">
+<img style="max-width: 400px;" src="https://storage.3d.io/5a4fdff6-a40b-403d-817c-802305866599/2017-07-26_12-32-12_8SJ7dY/Screen_Shot_2017-07-26_at_14.27.21.png">
 </a>
 
 <!--Link-->
@@ -44,7 +44,7 @@ This project included rich media like interactive floor plans, photography, vide
 
 <!--Picture-->
 <a href="https://storage.3d.io/5a4fdff6-a40b-403d-817c-802305866599/2017-07-26_09-53-27_lXMvWD/Screen_Shot_2017-07-26_at_11.53.09.png">
-<img style="max-width: 300px;" src="https://storage.3d.io/5a4fdff6-a40b-403d-817c-802305866599/2017-07-26_09-53-27_lXMvWD/Screen_Shot_2017-07-26_at_11.53.09.png">
+<img style="max-width: 400px;" src="https://storage.3d.io/5a4fdff6-a40b-403d-817c-802305866599/2017-07-26_09-53-27_lXMvWD/Screen_Shot_2017-07-26_at_11.53.09.png">
 </a>
 
 <!--Link-->
