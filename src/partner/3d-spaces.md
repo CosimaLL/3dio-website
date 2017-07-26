@@ -1,6 +1,6 @@
 <script id="partner-info" type="application/x-yaml">
 NAME: 3D Spaces
-TAGLINE: Professional 3D Models
+TAGLINE: Visual Interactive Real Estate Marketing
 DESCRIPTION: Visual interactive navigation for real estate. Include all your Archilogic models and other rich media into one interactive navigational experience.
 LINK: https://www.3dspaces.com.au/viznavigator-archilogic/
 IMAGE: https://storage.3d.io/535e624259ee6b0200000484/2017-04-12_07-50-45_3Y00jh/hero3.png
