@@ -11,7 +11,7 @@ EXAMPLES:
 </script>
 
 <!--Title-->
-## Example 1: Interactive off-the-plan residential development
+### Example 1: Interactive off-the-plan residential development
 
 <!--Description-->
 Project for 5 level, 27 unit off-the-plan residential development in Kedron, Brisbane, Australia. The goal was to give interested buyers a full picture of the available apartment units using renderings and interactive 3D models.
@@ -24,7 +24,7 @@ Project for 5 level, 27 unit off-the-plan residential development in Kedron, Bri
 <!--Link-->
 <a href="http://www.3dspaces.com.au/portfolio/gallagher-on-the-park/">Explore this example</a>
 
-## Example 2: Commercial Office Leasing
+### Example 2: Commercial Office Leasing
 
 <!--Description-->
 This project included rich media like interactive floor plans, photography, video, and "live view" animated hero.
@@ -37,7 +37,7 @@ This project included rich media like interactive floor plans, photography, vide
 <!--Link-->
 <a href="http://www.3dspaces.com.au/portfolio/40-tank-street-brisbane/">Explore this example</a>
 
-## Example 3: 56-unit off-the-plan residential development
+### Example 3: 56-unit off-the-plan residential development
 
 <!--Description-->
 8 level, 56 unit off-the-plan residential development in Gosford, NSW, Australia. The interactive representation of the development includes 3D models, floor plans, and rederings, all in one easy-to-use interface.
