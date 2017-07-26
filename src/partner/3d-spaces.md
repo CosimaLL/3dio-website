@@ -24,7 +24,20 @@ Project for 5 level, 27 unit off-the-plan residential development in Kedron, Bri
 <!--Link-->
 <a href="http://www.3dspaces.com.au/portfolio/gallagher-on-the-park/">Explore this example</a>
 
-## Example 2: 56-unit off-the-plan residential development
+## Example 2: Commercial Office Leasing
+
+<!--Description-->
+This project included rich media like interactive floor plans, photography, video, and "live view" animated hero.
+
+<!--Picture-->
+<a href="https://storage.3d.io/5a4fdff6-a40b-403d-817c-802305866599/2017-07-26_12-32-12_8SJ7dY/Screen_Shot_2017-07-26_at_14.27.21.png">
+<img style="max-width: 300px;" src="https://storage.3d.io/5a4fdff6-a40b-403d-817c-802305866599/2017-07-26_12-32-12_8SJ7dY/Screen_Shot_2017-07-26_at_14.27.21.png">
+</a>
+
+<!--Link-->
+<a href="http://www.3dspaces.com.au/portfolio/40-tank-street-brisbane/">Explore this example</a>
+
+## Example 3: 56-unit off-the-plan residential development
 
 <!--Description-->
 8 level, 56 unit off-the-plan residential development in Gosford, NSW, Australia. The interactive representation of the development includes 3D models, floor plans, and rederings, all in one easy-to-use interface.
