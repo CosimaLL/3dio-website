@@ -265,15 +265,23 @@ function getAllPartnerInfo () {
 }
 
 const partnerInfoTagRegex = `<script id="partner-info" type="application/x-yaml">([\\n\\s\\S]*)</script>`
+const missingEmptySpaceRegex = /^[\sa-z0-1_-]+(:)[a-z0-1_-]/gmi
 
 function parsePartnerInfo (str, path) {
   const infoSearch = new RegExp(partnerInfoTagRegex).exec(str)
   if (!infoSearch) throw `Partner page ${path} has malformed or missing <script id="partner-info" type="application/x-yaml">...</script> tag`
-  let info
+  let info, yamlText
   try {
-    info = yaml.safeLoad(infoSearch[1])
+    yamlText = infoSearch[1]
+    // catch typos related to empty spaces
+    //  console.log(/^[\sa-z0-1_-]+(:)[a-z0-1_-]/gmi.exec(yamlText))
+    yamlText = yamlText.replace(missingEmptySpaceRegex, function(match, group){
+      console.warn(`Fixed missing empty space in YAML part of file ${path} : ${match}`)
+      return match.replace(':', ': ')
+    })
+    info = yaml.safeLoad(yamlText)
   } catch (e) {
-    throw `Sorry, "partner-info" can not be parsed and is probably malformed. Read YAML specs: http://yaml.org/spec/`
+    throw `Sorry, "partner-info" of page ${path} can not be parsed and is probably malformed. Read YAML specs: http://yaml.org/spec/`
   }
   // placeholders
   if (!info.LOGO) info.LOGO = 'https://archilogic-com.github.io/ui-style-guide/certified-partner/archilogic-partner-badge-pyramid-gradient.svg'
