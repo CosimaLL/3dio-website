@@ -5,7 +5,7 @@ DESCRIPTION: Truss creates beautiful, hand-crafted 3D models using the 3d.io pla
 LINK:
 IMAGE:
 LOGO:
-CONTACT:jovanswork@gmail.com
+CONTACT: jovanswork@gmail.com
 COUNTRY: Serbia
 EXAMPLES:
 </script>
