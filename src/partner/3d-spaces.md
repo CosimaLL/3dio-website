@@ -10,4 +10,29 @@ COUNTRY: Australia
 EXAMPLES:
 </script>
 
-ipsum lorem ipsum lorem
+<!--Title-->
+## Example 1: Interactive off-the-plan residential development
+
+<!--Description-->
+Project for 5 level, 27 unit off-the-plan residential development in Kedron, Brisbane, Australia. The goal was to give interested buyers a full picture of the available apartment units using renderings and interactive 3D models.
+
+<!--Picture-->
+<a href="https://storage.3d.io/5a4fdff6-a40b-403d-817c-802305866599/2017-07-26_09-43-03_xvnkYO/Screen_Shot_2017-07-26_at_11.34.54.png">
+<img style="max-width: 300px;" src="https://storage.3d.io/5a4fdff6-a40b-403d-817c-802305866599/2017-07-26_09-43-03_xvnkYO/Screen_Shot_2017-07-26_at_11.34.54.png">
+</a>
+
+<!--Link-->
+<a href="http://www.3dspaces.com.au/portfolio/gallagher-on-the-park/">Explore this example</a>
+
+## Example 2: 56-unit off-the-plan residential development
+
+<!--Description-->
+8 level, 56 unit off-the-plan residential development in Gosford, NSW, Australia. The interactive representation of the development includes 3D models, floor plans, and rederings, all in one easy-to-use interface.
+
+<!--Picture-->
+<a href="https://storage.3d.io/5a4fdff6-a40b-403d-817c-802305866599/2017-07-26_09-53-27_lXMvWD/Screen_Shot_2017-07-26_at_11.53.09.png">
+<img style="max-width: 300px;" src="https://storage.3d.io/5a4fdff6-a40b-403d-817c-802305866599/2017-07-26_09-53-27_lXMvWD/Screen_Shot_2017-07-26_at_11.53.09.png">
+</a>
+
+<!--Link-->
+<a href="http://www.3dspaces.com.au/portfolio/8-seasons-gosford-nsw/">Explore this example</a>
