@@ -46,6 +46,12 @@ block content
               a(href=`mailto:${partner.EMAIL}?subject=Offer%20Request&body=Hi%0A%0AI%27m%20insterested%20in%20an%20offer%20for%20a%20project%20similar%20to%20%22${example.TITLE}%22%20(Pricing%20starting%20at%20$%20${example.PRICE}).%0A%0ABest%20wishes`)
                 .order Order for $ #{example.PRICE}+
 
-  .container
+  #additional-content.container
     .row
       .twelve.columns !{content}
+
+  .container
+    .row
+      .twelve.columns
+        p
+          a(href='/floor-plan-to-3d-conversion.md') Read more about how Certified Partners and 3d.io work together
