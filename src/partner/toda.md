@@ -14,15 +14,15 @@ EXAMPLES:
       DESCRIPTION: Highly detailed representation of the workspace featured in the US TV show the Office
       IMAGE: https://storage.3d.io/535e624259ee6b0200000484/2017-07-27_09-02-36_jznzzr/The_Office_Email_320_160.jpg
       URL: https://goo.gl/AX2hsU
-      PRICE: 
+      PRICE: From
     - TITLE: Handcrafted 3D Model - 50 Shades Darker
       DESCRIPTION: Representation of the duplex apartment featured in the US Movie Fifty Shades Darker. In this movie of the Fifty Shades film series, Anastasia Steel moves in with Christian Grey.
       IMAGE: https://storage.3d.io/535e624259ee6b0200000484/2017-07-27_09-09-55_aMDG0L/Grey_50_Shades_Darker_320_160.jpg
       URL: https://goo.gl/PBeyQE
-      PRICE:
+      PRICE: Starting at
     - TITLE: Handcrafted 3D Model - The Big Bang Theory
       DESCRIPTION: This 3D Model has been made after the American television sitcom The Big Bang Theory. It represents the Sheldon & Leonard's apartment and Penny's. 
       IMAGE: https://storage.3d.io/535e624259ee6b0200000484/2017-07-27_09-27-38_xy4IX5/BBT_320-160.jpg
       URL: https://goo.gl/EH3EZa
-      PRICE:
+      PRICE: From
 </script>
