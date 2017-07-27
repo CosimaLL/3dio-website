@@ -6,23 +6,46 @@ block head
   link(href=urlPathRoot+'/css/partner-profile-page.css', rel='stylesheet')
 
 block content
-  .container#title
+
+  #intro.container
     .row
       .twelve.columns
         p Certifier Partner of 3d.io
         .logo-container
           .bg
           .logo(style=`background-image: url('${partner.LOGO}');`)
-
         h1=partner.NAME
-        .tagline=partner.TAGLINE
-        .description=partner.DESCRIPTION
-        img(src=partner.IMAGE)
-      .twelve.columns
+        if partner.TAGLINE
+          h3!=partner.TAGLINE
+        if partner.DESCRIPTION
+          .description!=partner.DESCRIPTION
+        .badges
+          a(href='mailto:'+partner.EMAIL).badge.contact Email
+          if partner.URL
+            a(href=partner.URL target='_blank').badge.website Website
+        if partner.IMAGE
+          img(src=partner.IMAGE).image
+
+  if partner.EXAMPLES
+    #examples.container
+      .row
+        .twelve.columns
         h2 Example Projects
-        if partner.EXAMPLES
-          each example in partner.EXAMPLES
-            a(href=example.URL)
-              img(src=example.IMAGE)
-              h3(href=example.TITLE)
+      .row
+        each example in partner.EXAMPLES
+          .four.columns.example
+            .image
+              a(href=example.URL)
+                img(src=example.IMAGE)
+                .play-button
+            if example.TITLE
+              h3=example.TITLE
+            if example.DESCRIPTION
+              p!=example.DESCRIPTION
+            if example.PRICE
+              a(href=`mailto:${partner.EMAIL}?subject=Offer%20Request&body=Hi%0A%0AI%27m%20insterested%20in%20an%20offer%20for%20a%20project%20similar%20to%20%22${example.TITLE}%22%20(Pricing%20starting%20at%20$%20${example.PRICE}).%0A%0ABest%20wishes`)
+                .order Order for $ #{example.PRICE}+
+
+  .container
+    .row
       .twelve.columns !{content}
