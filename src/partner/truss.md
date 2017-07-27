@@ -3,6 +3,7 @@ NAME: Truss
 TAGLINE: Handcrafted 3D Models
 DESCRIPTION: Truss creates beautiful, hand-crafted 3D models of Condos, single-family homes, famous buildings - just tell us what you need and we will delight you.
 LOGO:
+LOGO_BG_COLOR:
 IMAGE:
 URL:
 EMAIL: jovanswork@gmail.com

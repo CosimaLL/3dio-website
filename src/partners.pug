@@ -2,13 +2,14 @@ extends pug-common/main.pug
 
 
 block head
+  link(href=urlPathRoot+'/css/md-wrapper.css', rel='stylesheet')
   link(href=urlPathRoot+'/css/partners-page.css', rel='stylesheet')
 
 block content
   .container#title
     .row
       .twelve.columns
-        h1 Certified Partners
+        h2 Certified Partners of 3d.io
 
   .container#filter
     .row
@@ -30,7 +31,7 @@ block content
           a(href='/partner/'+partner.filename)
             //-p= partner.TAGLINE
             .logo-container
-              .bg
+              .bg(style=`background: ${partner.LOGO_BG_COLOR};`)
               .logo(style=`background-image: url('${partner.LOGO}');`)
             h2= partner.NAME
 
@@ -42,3 +43,11 @@ block content
           +partner(p[1])
         if p[2]
           +partner(p[2])
+
+  .container
+    .row
+      .twelve.columns
+        p
+          a(href='/floor-plan-to-3d-conversion.md') Read about how Certified Partners and 3d.io work together
+        p
+          a(href='/partner-application.md') Apply to Certified Partner Program

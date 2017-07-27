@@ -12,7 +12,7 @@ block content
       .twelve.columns
         p Certifier Partner of 3d.io
         .logo-container
-          .bg
+          .bg(style=`background: ${partner.LOGO_BG_COLOR};`)
           .logo(style=`background-image: url('${partner.LOGO}');`)
         h1=partner.NAME
         if partner.TAGLINE

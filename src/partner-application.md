@@ -1,5 +1,7 @@
 # Certified Partner Program
 
+<img style="width: 150px;" src="https://archilogic-com.github.io/ui-style-guide/certified-partner/archilogic-partner-badge-pyramid-gradient.svg">
+
 ## Privileges
 
 * 100 free basic model conversions per month

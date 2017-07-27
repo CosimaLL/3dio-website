@@ -33,13 +33,11 @@ const src = {
   markdown: [
     // the first ** are necessary to mark 'src' as base dir for output paths
     'src/**/*.md',
-    '!src/**/partner/*.md',
-    'src/**/partner/apply.md'
+    '!src/**/partner/*.md'
   ],
   partnerProfiles: [
     // the first ** are necessary to mark 'src' as base dir for output paths
-    'src/**/partner/*.md',
-    '!src/**/partner/apply.md'
+    'src/**/partner/*.md'
   ],
   less: [
     // the first ** are necessary to mark 'src' as base dir for output paths
@@ -285,6 +283,7 @@ function parsePartnerInfo (str, path) {
   }
   // placeholders
   if (!info.LOGO) info.LOGO = 'https://archilogic-com.github.io/ui-style-guide/certified-partner/archilogic-partner-badge-pyramid-gradient.svg'
+  if (!info.LOGO_BG_COLOR) info.LOGO_BG_COLOR = '#ddd'
   return info
 }
 
