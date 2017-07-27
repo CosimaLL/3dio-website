@@ -17,6 +17,7 @@
   * Editing Furniture, Architecture and Materials
   * Lightmap baking
   * Import of custom 3D Models
+* Transparent pricing
 * Professional 3D modeling skills using Blender, Studio Max, Sketchup or Cinema 4D
 * Ability to “wow!” us and your customers with exceptional 3D content related to buildings and real estate
 
@@ -26,6 +27,7 @@
 * The skills to create customized applications using the Archilogic technology suite:
   * Building a-frame apps
   * Modifying logos, loading screens, buttons
+* Transparent pricing
 * The ability to get those applications deployed so your customers can use them
 * Ability to “wow!” us and your customers with exceptional applications related to buildings and real estate
 
